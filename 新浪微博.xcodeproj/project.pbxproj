@@ -11,8 +11,6 @@
 		0FA58B141DB7420000215374 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA58B121DB7420000215374 /* PhotoCell.swift */; };
 		0FB0996F1DB9B018009068B4 /* UserAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB0996E1DB9B018009068B4 /* UserAccountViewModel.swift */; };
 		0FB099711DB9B02B009068B4 /* NetWorkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB099701DB9B02B009068B4 /* NetWorkTool.swift */; };
-		0FB099751DB9B090009068B4 /* PublishController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB099731DB9B090009068B4 /* PublishController.swift */; };
-		0FB099761DB9B090009068B4 /* PublishController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FB099741DB9B090009068B4 /* PublishController.xib */; };
 		0FB099791DB9CE31009068B4 /* AlertTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB099781DB9CE31009068B4 /* AlertTableView.swift */; };
 		0FB0997D1DB9D4D0009068B4 /* AlertTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FB0997C1DB9D4D0009068B4 /* AlertTableView.xib */; };
 		630556011DAFD11A00E0B190 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630555FF1DAFD11A00E0B190 /* WelcomeViewController.swift */; };
@@ -27,6 +25,11 @@
 		633A16891D9BF89100E79C46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633A16881D9BF89100E79C46 /* AppDelegate.swift */; };
 		633BF98E1DB67E0900682917 /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633BF98D1DB67E0900682917 /* NSDate-Extension.swift */; };
 		633BF9901DB6828600682917 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633BF98F1DB6828600682917 /* User.swift */; };
+		635B45011DBA6F9D00D09112 /* IconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635B44FB1DBA6F9D00D09112 /* IconCell.swift */; };
+		635B45021DBA6F9D00D09112 /* IconCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 635B44FC1DBA6F9D00D09112 /* IconCell.xib */; };
+		635B45031DBA6F9D00D09112 /* PublishController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635B44FD1DBA6F9D00D09112 /* PublishController.swift */; };
+		635B45041DBA6F9D00D09112 /* PublishController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 635B44FE1DBA6F9D00D09112 /* PublishController.xib */; };
+		635B45051DBA6F9D00D09112 /* PublishTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635B45001DBA6F9D00D09112 /* PublishTextView.swift */; };
 		635CF78E1DB7A2C400399E2F /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 635CF7641DB7A2C400399E2F /* MJRefreshAutoFooter.m */; };
 		635CF78F1DB7A2C400399E2F /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 635CF7661DB7A2C400399E2F /* MJRefreshBackFooter.m */; };
 		635CF7901DB7A2C400399E2F /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 635CF7681DB7A2C400399E2F /* MJRefreshComponent.m */; };
@@ -116,8 +119,6 @@
 		0FA58B121DB7420000215374 /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		0FB0996E1DB9B018009068B4 /* UserAccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccountViewModel.swift; sourceTree = "<group>"; };
 		0FB099701DB9B02B009068B4 /* NetWorkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorkTool.swift; sourceTree = "<group>"; };
-		0FB099731DB9B090009068B4 /* PublishController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishController.swift; sourceTree = "<group>"; };
-		0FB099741DB9B090009068B4 /* PublishController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PublishController.xib; sourceTree = "<group>"; };
 		0FB099781DB9CE31009068B4 /* AlertTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertTableView.swift; sourceTree = "<group>"; };
 		0FB0997C1DB9D4D0009068B4 /* AlertTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertTableView.xib; sourceTree = "<group>"; };
 		630555FF1DAFD11A00E0B190 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +133,11 @@
 		633A16881D9BF89100E79C46 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		633BF98D1DB67E0900682917 /* NSDate-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
 		633BF98F1DB6828600682917 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		635B44FB1DBA6F9D00D09112 /* IconCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconCell.swift; sourceTree = "<group>"; };
+		635B44FC1DBA6F9D00D09112 /* IconCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IconCell.xib; sourceTree = "<group>"; };
+		635B44FD1DBA6F9D00D09112 /* PublishController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishController.swift; sourceTree = "<group>"; };
+		635B44FE1DBA6F9D00D09112 /* PublishController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PublishController.xib; sourceTree = "<group>"; };
+		635B45001DBA6F9D00D09112 /* PublishTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishTextView.swift; sourceTree = "<group>"; };
 		635CF7631DB7A2C400399E2F /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoFooter.h; sourceTree = "<group>"; };
 		635CF7641DB7A2C400399E2F /* MJRefreshAutoFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshAutoFooter.m; sourceTree = "<group>"; };
 		635CF7651DB7A2C400399E2F /* MJRefreshBackFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackFooter.h; sourceTree = "<group>"; };
@@ -301,15 +307,6 @@
 			path = PhotosView;
 			sourceTree = "<group>";
 		};
-		0FB099721DB9B090009068B4 /* Publish */ = {
-			isa = PBXGroup;
-			children = (
-				0FB099731DB9B090009068B4 /* PublishController.swift */,
-				0FB099741DB9B090009068B4 /* PublishController.xib */,
-			);
-			path = Publish;
-			sourceTree = "<group>";
-		};
 		0FB099771DB9CE16009068B4 /* AlertTableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -363,7 +360,7 @@
 		633A16821D9BF81300E79C46 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				0FB099721DB9B090009068B4 /* Publish */,
+				635B44F91DBA6F9D00D09112 /* Publish */,
 				630555FE1DAFD10800E0B190 /* Welcome */,
 				6391918E1DAD0F37005B6C75 /* OAuth */,
 				63A5010E1D9C069E001CB713 /* Login */,
@@ -404,6 +401,34 @@
 				63A501091D9BFD2A001CB713 /* Tools(工具类) */,
 			);
 			path = Other;
+			sourceTree = "<group>";
+		};
+		635B44F91DBA6F9D00D09112 /* Publish */ = {
+			isa = PBXGroup;
+			children = (
+				635B44FD1DBA6F9D00D09112 /* PublishController.swift */,
+				635B44FE1DBA6F9D00D09112 /* PublishController.xib */,
+				635B44FA1DBA6F9D00D09112 /* IconCell */,
+				635B44FF1DBA6F9D00D09112 /* PublishTextView */,
+			);
+			path = Publish;
+			sourceTree = "<group>";
+		};
+		635B44FA1DBA6F9D00D09112 /* IconCell */ = {
+			isa = PBXGroup;
+			children = (
+				635B44FB1DBA6F9D00D09112 /* IconCell.swift */,
+				635B44FC1DBA6F9D00D09112 /* IconCell.xib */,
+			);
+			path = IconCell;
+			sourceTree = "<group>";
+		};
+		635B44FF1DBA6F9D00D09112 /* PublishTextView */ = {
+			isa = PBXGroup;
+			children = (
+				635B45001DBA6F9D00D09112 /* PublishTextView.swift */,
+			);
+			path = PublishTextView;
 			sourceTree = "<group>";
 		};
 		635CF7611DB7A2C400399E2F /* MJRefresh */ = {
@@ -811,9 +836,10 @@
 				63D3C9C31D9ABDDD00761264 /* LaunchScreen.storyboard in Resources */,
 				63D3C9C01D9ABDDD00761264 /* Assets.xcassets in Resources */,
 				63A501121D9C06CD001CB713 /* LoginView.xib in Resources */,
+				635B45021DBA6F9D00D09112 /* IconCell.xib in Resources */,
 				630556021DAFD11A00E0B190 /* WelcomeViewController.xib in Resources */,
-				0FB099761DB9B090009068B4 /* PublishController.xib in Resources */,
 				639191921DAD0F4D005B6C75 /* OAuthViewController.xib in Resources */,
+				635B45041DBA6F9D00D09112 /* PublishController.xib in Resources */,
 				635CF79C1DB7A2C400399E2F /* MJRefresh.bundle in Resources */,
 				0FB0997D1DB9D4D0009068B4 /* AlertTableView.xib in Resources */,
 				63D3C9BE1D9ABDDD00761264 /* Main.storyboard in Resources */,
@@ -862,6 +888,7 @@
 				0FB0996F1DB9B018009068B4 /* UserAccountViewModel.swift in Sources */,
 				6374B4791DB7C77E0033D88E /* BlurEffectMenu.m in Sources */,
 				635CF7911DB7A2C400399E2F /* MJRefreshFooter.m in Sources */,
+				635B45031DBA6F9D00D09112 /* PublishController.swift in Sources */,
 				635CF7921DB7A2C400399E2F /* MJRefreshHeader.m in Sources */,
 				633BF98E1DB67E0900682917 /* NSDate-Extension.swift in Sources */,
 				635CF78F1DB7A2C400399E2F /* MJRefreshBackFooter.m in Sources */,
@@ -878,10 +905,12 @@
 				639191AB1DAD25D5005B6C75 /* UserAccount.swift in Sources */,
 				639191A91DAD1653005B6C75 /* SVRadialGradientLayer.m in Sources */,
 				633BF9901DB6828600682917 /* User.swift in Sources */,
+				635B45051DBA6F9D00D09112 /* PublishTextView.swift in Sources */,
 				636897741DAD4B6C0068631E /* UIImageView+HighlightedWebCache.m in Sources */,
 				63C025DE1DABE45300AC447F /* AFHTTPRequestOperation.m in Sources */,
 				639191A81DAD1653005B6C75 /* SVProgressHUD.m in Sources */,
 				63C025E61DABE45300AC447F /* AFURLSessionManager.m in Sources */,
+				635B45011DBA6F9D00D09112 /* IconCell.swift in Sources */,
 				0FA58B141DB7420000215374 /* PhotoCell.swift in Sources */,
 				0FB099791DB9CE31009068B4 /* AlertTableView.swift in Sources */,
 				639191911DAD0F4D005B6C75 /* OAuthViewController.swift in Sources */,
@@ -911,7 +940,6 @@
 				633A16871D9BF84400E79C46 /* HomeViewController.swift in Sources */,
 				63C025E11DABE45300AC447F /* AFNetworkReachabilityManager.m in Sources */,
 				63C025DF1DABE45300AC447F /* AFHTTPRequestOperationManager.m in Sources */,
-				0FB099751DB9B090009068B4 /* PublishController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

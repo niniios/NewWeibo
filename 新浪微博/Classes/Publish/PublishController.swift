@@ -8,15 +8,60 @@
 
 import UIKit
 
-class PublishController: UIViewController {
+let edgeMargin: CGFloat = 15
+let iconCellId: String = "iconCellId"
 
+class PublishController: UIViewController {
+    
+    //文本输入框
+    @IBOutlet weak var publishTextView: PublishTextView!
+    //工具条距离底部的距离
+    @IBOutlet weak var toolBarBottomConstraint: NSLayoutConstraint!
+    //图片展示view
+    @IBOutlet weak var picPickView: UICollectionView!
+    //图片展示view的高度
+    @IBOutlet weak var picPickViewHeight: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupNavigationBar()
+        
+        //设置图片选择器的基本属性
+        setupPicPickView()
 
+        //监听通知
+        NotificationCenter.default.addObserver(self, selector: #selector(PublishController.keyboardWillChangeFrame(_:)), name: NSNotification.Name.UIKeyboardWillChangeFrame , object: nil)
+    }
+    
+
+    override func viewDidAppear(_ animated: Bool) {
+        
+        super.viewDidAppear(animated)
+        publishTextView.becomeFirstResponder()
+    }
+    
+    //点击弹出图片
+    @IBAction func picPickButtonClick(_ sender: AnyObject) {
+        
+        //退出键盘
+        publishTextView.resignFirstResponder()
+        
+        picPickViewHeight.constant = UIScreen.main.bounds.height * 0.65
+        
+        UIView.animate(withDuration: 0.3) { 
+            
+            self.view.layoutIfNeeded()
+        }
+        
+    }
+    deinit {
+        
+        NotificationCenter.default.removeObserver(self)
     }
 }
+
+
 
 //MARK:- 导航栏的点击事件
 extension PublishController {
@@ -43,3 +88,81 @@ extension PublishController {
         
     }
 }
+
+//MARK:- textView代理方法
+extension PublishController: UITextViewDelegate {
+
+    func textViewDidChange(_ textView: UITextView) {
+        
+        self.publishTextView.placeHolderLabel.isHidden = textView.hasText
+        navigationItem.rightBarButtonItem?.isEnabled = textView.hasText
+        
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        publishTextView.resignFirstResponder()
+    }
+}
+
+extension PublishController {
+
+    @objc func keyboardWillChangeFrame(_ note: NSNotification) {
+        
+        //获取动画执行的时间
+        let duration = note.userInfo![UIKeyboardAnimationDurationUserInfoKey] as! CGFloat
+        // 2.取出键盘最终的位置
+        let endFrame = ((note as NSNotification).userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+        
+        // 3.计算弹出高度
+        let margin = UIScreen.main.bounds.height - endFrame.origin.y
+        
+        // 4.执行动画
+        toolBarBottomConstraint.constant = margin
+        UIView.animate(withDuration: TimeInterval(duration), animations: { () -> Void in
+            self.view.layoutIfNeeded()
+        })
+    }
+}
+
+//MARK:- UICollectionViewDataSource
+
+extension PublishController:UICollectionViewDataSource {
+    
+    func setupPicPickView() {
+        
+        picPickView.dataSource = self
+        
+        picPickView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: iconCellId)
+        
+        let layout = picPickView.collectionViewLayout as! UICollectionViewFlowLayout
+        
+        let itemWH = (UIScreen.main.bounds.width - 4.0 * edgeMargin) / 3.0
+        
+        layout.itemSize = CGSize(width:itemWH, height: itemWH)
+        
+        layout.minimumLineSpacing = edgeMargin
+        
+        layout.minimumInteritemSpacing = edgeMargin
+        
+        //设置内边距
+        picPickView.contentInset = UIEdgeInsets(top: edgeMargin, left: edgeMargin, bottom: 0, right: edgeMargin)
+    }
+
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: iconCellId, for: indexPath)
+        cell.backgroundColor = UIColor.red
+        return cell
+    }
+}
+
