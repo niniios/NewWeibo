@@ -12,3 +12,6 @@ import Foundation
 let app_key = "858550576"
 let app_secret = "84b8e13f223173f7d797e22b155e38cf"
 let redirect_uri = "http://www.cqut.edu.cn"
+
+//发布微博界面的通知常量
+let PickIconAddButtonClickNotification = "PickIconAddButtonClickNotification"

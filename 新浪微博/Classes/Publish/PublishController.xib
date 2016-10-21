@@ -21,7 +21,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0nU-NB-Yhq" customClass="PublishTextView" customModule="新浪微博" customModuleProvider="target">
-                    <color key="backgroundColor" red="1" green="0.51885102959999996" blue="0.3091910497" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     <connections>
@@ -29,7 +29,7 @@
                     </connections>
                 </textView>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="exK-cn-TXK">
-                    <color key="backgroundColor" red="0.4976772149" green="1" blue="0.25977178270000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="H6Y-Eo-oCh"/>
                     </constraints>
@@ -110,7 +110,7 @@
                 <constraint firstItem="phr-c5-wjt" firstAttribute="top" secondItem="0nU-NB-Yhq" secondAttribute="bottom" id="ozu-qL-kbr"/>
                 <constraint firstItem="phr-c5-wjt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="vBB-sS-f4F"/>
             </constraints>
-            <point key="canvasLocation" x="-564" y="-2806"/>
+            <point key="canvasLocation" x="-705" y="-2815"/>
         </view>
     </objects>
     <resources>

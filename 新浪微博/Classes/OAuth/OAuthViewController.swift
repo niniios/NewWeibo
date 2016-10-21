@@ -70,6 +70,7 @@ extension OAuthViewController {
     //关闭按钮点击事件
     func leftBarButtonDidClick() {
         
+        SVProgressHUD.dismiss()
         dismiss(animated: true, completion: nil)
     }
 }

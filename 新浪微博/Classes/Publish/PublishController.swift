@@ -32,6 +32,9 @@ class PublishController: UIViewController {
 
         //监听通知
         NotificationCenter.default.addObserver(self, selector: #selector(PublishController.keyboardWillChangeFrame(_:)), name: NSNotification.Name.UIKeyboardWillChangeFrame , object: nil)
+        
+        //注册添加图片的通知 PickIconAddButtonClickNotification
+        NotificationCenter.default.addObserver(self, selector: #selector(PublishController.pickIconAddButtonClick), name: NSNotification.Name(rawValue: PickIconAddButtonClickNotification) , object: nil)
     }
     
 
@@ -61,8 +64,6 @@ class PublishController: UIViewController {
     }
 }
 
-
-
 //MARK:- 导航栏的点击事件
 extension PublishController {
 
@@ -80,6 +81,9 @@ extension PublishController {
     }
     
     func closePublishVC (){
+        
+        
+        publishTextView.resignFirstResponder()
         
         dismiss(animated: true, completion: nil)
     }
@@ -107,6 +111,7 @@ extension PublishController: UITextViewDelegate {
 
 extension PublishController {
 
+    //键盘位置改变事件
     @objc func keyboardWillChangeFrame(_ note: NSNotification) {
         
         //获取动画执行的时间
@@ -125,6 +130,20 @@ extension PublishController {
     }
 }
 
+
+//MARK:- 图片的添加和删除
+extension PublishController {
+
+    //添加图片按钮的点击事件
+    func pickIconAddButtonClick() {
+        
+        print("lalla ")
+        
+    }
+
+
+}
+
 //MARK:- UICollectionViewDataSource
 
 extension PublishController:UICollectionViewDataSource {
@@ -133,7 +152,7 @@ extension PublishController:UICollectionViewDataSource {
         
         picPickView.dataSource = self
         
-        picPickView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: iconCellId)
+        picPickView.register(IconCell.self, forCellWithReuseIdentifier: iconCellId)
         
         let layout = picPickView.collectionViewLayout as! UICollectionViewFlowLayout
         
@@ -160,8 +179,8 @@ extension PublishController:UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: iconCellId, for: indexPath)
-        cell.backgroundColor = UIColor.red
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: iconCellId, for: indexPath) as! IconCell
+        
         return cell
     }
 }
