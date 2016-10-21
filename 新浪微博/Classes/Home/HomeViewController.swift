@@ -30,6 +30,9 @@ class HomeViewController: BaseViewController {
         
         //设置tableView的基本样式
         setTableViewStyle()
+        
+        //注册首页更多操作的通知 HomeCellMoreOperationNotification
+        NotificationCenter.default.addObserver(self, selector: #selector(HomeViewController.moreOperation), name: NSNotification.Name(rawValue: HomeCellMoreOperationNotification) , object: nil)
     }
 }
 
@@ -331,7 +334,35 @@ extension HomeViewController {
     }
 }
 
-//MARK:- tableView代理
+//MARK:- 更多操作选项
 extension HomeViewController {
     
+    func moreOperation() {
+    
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        let collectAction = UIAlertAction(title: "收藏", style: .default) { (_) in
+
+        }
+        
+        let helpAction = UIAlertAction(title: "帮上头条", style: .default) { (_) in
+
+        }
+        
+        let shieldAction = UIAlertAction(title: "屏蔽", style: .default) { (_) in
+
+        }
+        
+        let cancelAction = UIAlertAction(title: "取消", style: .cancel) { (_) in
+
+            alertController.dismiss(animated: true, completion: nil)
+        }
+        
+        alertController.addAction(collectAction)
+        alertController.addAction(helpAction)
+        alertController.addAction(shieldAction)
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true, completion: nil)
+    }
 }

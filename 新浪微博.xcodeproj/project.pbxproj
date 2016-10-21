@@ -11,8 +11,6 @@
 		0FA58B141DB7420000215374 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA58B121DB7420000215374 /* PhotoCell.swift */; };
 		0FB0996F1DB9B018009068B4 /* UserAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB0996E1DB9B018009068B4 /* UserAccountViewModel.swift */; };
 		0FB099711DB9B02B009068B4 /* NetWorkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB099701DB9B02B009068B4 /* NetWorkTool.swift */; };
-		0FB099791DB9CE31009068B4 /* AlertTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB099781DB9CE31009068B4 /* AlertTableView.swift */; };
-		0FB0997D1DB9D4D0009068B4 /* AlertTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FB0997C1DB9D4D0009068B4 /* AlertTableView.xib */; };
 		630556011DAFD11A00E0B190 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630555FF1DAFD11A00E0B190 /* WelcomeViewController.swift */; };
 		630556021DAFD11A00E0B190 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 630556001DAFD11A00E0B190 /* WelcomeViewController.xib */; };
 		630556051DAFEADD00E0B190 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630556041DAFEADD00E0B190 /* Status.swift */; };
@@ -75,13 +73,13 @@
 		636E048B1DBA7DEA00E3B7EF /* TZPhotoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 636E047E1DBA7DEA00E3B7EF /* TZPhotoPreviewController.m */; };
 		636E048C1DBA7DEA00E3B7EF /* TZVideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 636E04801DBA7DEA00E3B7EF /* TZVideoPlayerController.m */; };
 		636E048D1DBA7DEA00E3B7EF /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 636E04821DBA7DEA00E3B7EF /* UIView+Layout.m */; };
+		636E048F1DBA880600E3B7EF /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636E048E1DBA880600E3B7EF /* Common.swift */; };
 		6374B4791DB7C77E0033D88E /* BlurEffectMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6374B4781DB7C77E0033D88E /* BlurEffectMenu.m */; };
 		6374B47D1DB7CABF0033D88E /* PhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6374B47C1DB7CABF0033D88E /* PhotosView.swift */; };
 		639191911DAD0F4D005B6C75 /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6391918F1DAD0F4D005B6C75 /* OAuthViewController.swift */; };
 		639191921DAD0F4D005B6C75 /* OAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 639191901DAD0F4D005B6C75 /* OAuthViewController.xib */; };
 		639191961DAD1396005B6C75 /* TitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639191941DAD1396005B6C75 /* TitleButton.swift */; };
 		639191971DAD1396005B6C75 /* UIButton-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639191951DAD1396005B6C75 /* UIButton-Extension.swift */; };
-		639191991DAD13AD005B6C75 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639191981DAD13AD005B6C75 /* Common.swift */; };
 		639191A51DAD1653005B6C75 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6391919C1DAD1653005B6C75 /* SVIndefiniteAnimatedView.m */; };
 		639191A61DAD1653005B6C75 /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6391919E1DAD1653005B6C75 /* SVProgressAnimatedView.m */; };
 		639191A71DAD1653005B6C75 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 639191A01DAD1653005B6C75 /* SVProgressHUD.bundle */; };
@@ -129,8 +127,6 @@
 		0FA58B121DB7420000215374 /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		0FB0996E1DB9B018009068B4 /* UserAccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccountViewModel.swift; sourceTree = "<group>"; };
 		0FB099701DB9B02B009068B4 /* NetWorkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorkTool.swift; sourceTree = "<group>"; };
-		0FB099781DB9CE31009068B4 /* AlertTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertTableView.swift; sourceTree = "<group>"; };
-		0FB0997C1DB9D4D0009068B4 /* AlertTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertTableView.xib; sourceTree = "<group>"; };
 		630555FF1DAFD11A00E0B190 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		630556001DAFD11A00E0B190 /* WelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
 		630556041DAFEADD00E0B190 /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
@@ -239,6 +235,7 @@
 		636E04801DBA7DEA00E3B7EF /* TZVideoPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZVideoPlayerController.m; sourceTree = "<group>"; };
 		636E04811DBA7DEA00E3B7EF /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
 		636E04821DBA7DEA00E3B7EF /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
+		636E048E1DBA880600E3B7EF /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		6374B4771DB7C77E0033D88E /* BlurEffectMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlurEffectMenu.h; sourceTree = "<group>"; };
 		6374B4781DB7C77E0033D88E /* BlurEffectMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlurEffectMenu.m; sourceTree = "<group>"; };
 		6374B47C1DB7CABF0033D88E /* PhotosView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosView.swift; sourceTree = "<group>"; };
@@ -247,7 +244,6 @@
 		639191901DAD0F4D005B6C75 /* OAuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OAuthViewController.xib; sourceTree = "<group>"; };
 		639191941DAD1396005B6C75 /* TitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleButton.swift; sourceTree = "<group>"; };
 		639191951DAD1396005B6C75 /* UIButton-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton-Extension.swift"; sourceTree = "<group>"; };
-		639191981DAD13AD005B6C75 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		6391919B1DAD1653005B6C75 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
 		6391919C1DAD1653005B6C75 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
 		6391919D1DAD1653005B6C75 /* SVProgressAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressAnimatedView.h; sourceTree = "<group>"; };
@@ -337,15 +333,6 @@
 			path = PhotosView;
 			sourceTree = "<group>";
 		};
-		0FB099771DB9CE16009068B4 /* AlertTableView */ = {
-			isa = PBXGroup;
-			children = (
-				0FB099781DB9CE31009068B4 /* AlertTableView.swift */,
-				0FB0997C1DB9D4D0009068B4 /* AlertTableView.xib */,
-			);
-			path = AlertTableView;
-			sourceTree = "<group>";
-		};
 		630555FE1DAFD10800E0B190 /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
@@ -405,7 +392,6 @@
 			isa = PBXGroup;
 			children = (
 				633A16861D9BF84400E79C46 /* HomeViewController.swift */,
-				0FB099771DB9CE16009068B4 /* AlertTableView */,
 				0FA58B061DB739C700215374 /* PhotoCell(单张配图) */,
 				0FA58B091DB739C700215374 /* PhotosView(配图控件) */,
 				630556061DAFF1CA00E0B190 /* HomeCell(微博Cell) */,
@@ -418,6 +404,7 @@
 		633A16841D9BF81300E79C46 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				636E048E1DBA880600E3B7EF /* Common.swift */,
 				0F2833F31DB9A6AB0001F254 /* BaseViewController.swift */,
 				633A16881D9BF89100E79C46 /* AppDelegate.swift */,
 			);
@@ -673,7 +660,6 @@
 				633BF98D1DB67E0900682917 /* NSDate-Extension.swift */,
 				0FB099701DB9B02B009068B4 /* NetWorkTool.swift */,
 				6391918D1DAD04BF005B6C75 /* WeiBo-Bridging-Header.h */,
-				639191981DAD13AD005B6C75 /* Common.swift */,
 				639191931DAD1396005B6C75 /* UIButton扩展 */,
 			);
 			path = "Tools(工具类)";
@@ -898,7 +884,6 @@
 				639191921DAD0F4D005B6C75 /* OAuthViewController.xib in Resources */,
 				635B45041DBA6F9D00D09112 /* PublishController.xib in Resources */,
 				635CF79C1DB7A2C400399E2F /* MJRefresh.bundle in Resources */,
-				0FB0997D1DB9D4D0009068B4 /* AlertTableView.xib in Resources */,
 				63D3C9BE1D9ABDDD00761264 /* Main.storyboard in Resources */,
 				636E04871DBA7DEA00E3B7EF /* TZImagePickerController.bundle in Resources */,
 			);
@@ -973,11 +958,11 @@
 				63C025E61DABE45300AC447F /* AFURLSessionManager.m in Sources */,
 				635B45011DBA6F9D00D09112 /* IconCell.swift in Sources */,
 				0FA58B141DB7420000215374 /* PhotoCell.swift in Sources */,
-				0FB099791DB9CE31009068B4 /* AlertTableView.swift in Sources */,
 				639191911DAD0F4D005B6C75 /* OAuthViewController.swift in Sources */,
 				635CF78E1DB7A2C400399E2F /* MJRefreshAutoFooter.m in Sources */,
 				636E04831DBA7DEA00E3B7EF /* NSBundle+TZImagePicker.m in Sources */,
 				636E04891DBA7DEA00E3B7EF /* TZPhotoPickerController.m in Sources */,
+				636E048F1DBA880600E3B7EF /* Common.swift in Sources */,
 				636E04861DBA7DEA00E3B7EF /* TZImageManager.m in Sources */,
 				639191961DAD1396005B6C75 /* TitleButton.swift in Sources */,
 				636897721DAD4B6C0068631E /* UIImage+MultiFormat.m in Sources */,
@@ -996,7 +981,6 @@
 				639191A51DAD1653005B6C75 /* SVIndefiniteAnimatedView.m in Sources */,
 				635CF79F1DB7A2C400399E2F /* UIScrollView+MJRefresh.m in Sources */,
 				0FB099711DB9B02B009068B4 /* NetWorkTool.swift in Sources */,
-				639191991DAD13AD005B6C75 /* Common.swift in Sources */,
 				636E048B1DBA7DEA00E3B7EF /* TZPhotoPreviewController.m in Sources */,
 				639191A61DAD1653005B6C75 /* SVProgressAnimatedView.m in Sources */,
 				635CF7951DB7A2C400399E2F /* MJRefreshAutoStateFooter.m in Sources */,

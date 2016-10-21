@@ -15,3 +15,4 @@ let redirect_uri = "http://www.cqut.edu.cn"
 
 //发布微博界面的通知常量
 let PickIconAddButtonClickNotification = "PickIconAddButtonClickNotification"
+let HomeCellMoreOperationNotification = "HomeCellMoreOperationNotification"

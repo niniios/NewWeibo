@@ -58,10 +58,18 @@ class PublishController: UIViewController {
         }
         
     }
+    
+    //移除通知
     deinit {
         
         NotificationCenter.default.removeObserver(self)
     }
+}
+
+extension PublishController: UIActionSheetDelegate {
+
+    
+
 }
 
 //MARK:- 导航栏的点击事件
@@ -137,11 +145,31 @@ extension PublishController {
     //添加图片按钮的点击事件
     func pickIconAddButtonClick() {
         
-        print("lalla ")
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        let libraryAction = UIAlertAction(title: "进入相册", style: .default) { (_) in
+            
+            print("libraryAction")
+        }
+        
+        let creameAction = UIAlertAction(title: "打开相机", style: .default) { (_) in
+            
+            print("creameAction")
+        }
+        
+        let cancelAction = UIAlertAction(title: "取消", style: .cancel) { (_) in
+            
+            print("cancelAction")
+            alertController.dismiss(animated: true, completion: nil)
+        }
+        
+        alertController.addAction(libraryAction)
+        alertController.addAction(creameAction)
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true, completion: nil)
         
     }
-
-
 }
 
 //MARK:- UICollectionViewDataSource

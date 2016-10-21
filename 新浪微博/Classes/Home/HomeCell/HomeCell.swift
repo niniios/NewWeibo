@@ -14,7 +14,6 @@ class HomeCell: UITableViewCell {
     
     //MARK:- 控件属性
     
-    
     @IBOutlet weak var operationButton: UIButton!
     //头像
     @IBOutlet weak var iconView: UIImageView!
@@ -230,9 +229,7 @@ extension HomeCell {
 
     func operationButtonDidClicked() {
         
-        AlertTableView.alertTableView(titles: ["喜欢", "点赞", "上头条", "收藏"], cancelButtonTitle: "取消") { (index) in
-            
-            print(index)
-        }
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: HomeCellMoreOperationNotification), object: nil)
+
     }
 }
