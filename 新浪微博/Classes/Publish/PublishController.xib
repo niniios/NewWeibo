@@ -39,6 +39,10 @@
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="N1Y-1z-IpJ"/>
+                        <outlet property="delegate" destination="-1" id="Uto-RN-l79"/>
+                    </connections>
                 </collectionView>
                 <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="phr-c5-wjt">
                     <constraints>
@@ -53,7 +57,7 @@
                                 <state key="normal" image="compose_toolbar_picture"/>
                                 <state key="highlighted" image="compose_toolbar_picture_highlighted"/>
                                 <connections>
-                                    <action selector="picPickButtonClick:" destination="-1" eventType="touchUpInside" id="Xqa-KZ-yj8"/>
+                                    <action selector="toolBarIconPickButtonClick:" destination="-1" eventType="touchUpInside" id="q6h-jt-hZD"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -110,7 +114,7 @@
                 <constraint firstItem="phr-c5-wjt" firstAttribute="top" secondItem="0nU-NB-Yhq" secondAttribute="bottom" id="ozu-qL-kbr"/>
                 <constraint firstItem="phr-c5-wjt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="vBB-sS-f4F"/>
             </constraints>
-            <point key="canvasLocation" x="-705" y="-2815"/>
+            <point key="canvasLocation" x="-1110" y="-2790"/>
         </view>
     </objects>
     <resources>

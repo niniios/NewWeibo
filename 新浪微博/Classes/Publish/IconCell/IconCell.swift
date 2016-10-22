@@ -12,8 +12,10 @@ let itemWH = (UIScreen.main.bounds.width - 4.0 * 15) / 3.0
 
 class IconCell: UICollectionViewCell {
     
-    lazy var addButton: UIButton = UIButton()
+    //图片
+    lazy var iconView: UIImageView = UIImageView()
     
+    //删除按钮
     lazy var deleteButton: UIButton = UIButton()
 
     override init(frame: CGRect) {
@@ -27,25 +29,13 @@ class IconCell: UICollectionViewCell {
     
     func setupUI()  {
         
-        addButton.frame = CGRect(x: 0, y: 0, width: itemWH, height: itemWH)
-        addButton.setBackgroundImage(UIImage(named:"compose_pic_add"), for: .normal)
-        addButton.setBackgroundImage(UIImage(named:"compose_pic_add_highlighted"), for: .highlighted)
+        iconView.frame = CGRect(x: 0, y: 0, width: itemWH, height: itemWH)
+        addSubview(iconView)
         
-        //添加图片的事件
-        addButton.addTarget(self, action: #selector(IconCell.addButtonDidClick), for: .touchUpInside)
-        
-        addSubview(addButton)
-        
-        deleteButton.frame = CGRect(x: itemWH - 25, y: 0, width: 25, height: 25)
-        deleteButton.isHidden = true
+        deleteButton.frame = CGRect(x: itemWH - 20, y: -5, width: 25, height: 25)
         deleteButton.setBackgroundImage(UIImage(named:"compose_photo_close"), for: .normal)
         deleteButton.setBackgroundImage(UIImage(named:"compose_photo_close"), for: .highlighted)
 
         addSubview(deleteButton)
-    }
-    
-    func addButtonDidClick() {
-        
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: PickIconAddButtonClickNotification), object: nil)
     }
 }
