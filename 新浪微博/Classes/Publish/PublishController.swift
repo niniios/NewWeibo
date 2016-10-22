@@ -18,6 +18,9 @@ class PublishController: UIViewController {
     
     lazy var selectedAssetsArray = [Any]()
     
+    //表情键盘控制器
+    lazy var emotionController: EmotionController = EmotionController()
+    
     //文本输入框
     @IBOutlet weak var publishTextView: PublishTextView!
     //工具条距离底部的距离
@@ -58,6 +61,20 @@ class PublishController: UIViewController {
             
             self.view.layoutIfNeeded()
         }
+    }
+    
+    //工具条表情点击切换键盘
+    @IBAction func toolBarEmotionButtonClick(_ sender: AnyObject) {
+        
+        //退出键盘
+        publishTextView.resignFirstResponder()
+        
+        //切换键盘
+        publishTextView.inputView = publishTextView.inputView != nil ? nil :  emotionController.view
+        
+        
+        //弹出键盘
+        publishTextView.becomeFirstResponder()
     }
     
     //移除通知

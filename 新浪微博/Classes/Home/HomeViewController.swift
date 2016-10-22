@@ -119,7 +119,8 @@ extension HomeViewController  {
         header?.setTitle("加载中...", for: .refreshing)
         
         tableView.mj_header = header
-        tableView.mj_header.beginRefreshing()
+        //进入界面就开始加载数据
+//        tableView.mj_header.beginRefreshing()
         
         //创建上拉加载更多控件
         let footer = MJRefreshAutoNormalFooter(refreshingTarget: self, refreshingAction: #selector(HomeViewController.loadOldStatus))

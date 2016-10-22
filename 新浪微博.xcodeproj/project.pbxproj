@@ -74,8 +74,8 @@
 		636E048C1DBA7DEA00E3B7EF /* TZVideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 636E04801DBA7DEA00E3B7EF /* TZVideoPlayerController.m */; };
 		636E048D1DBA7DEA00E3B7EF /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 636E04821DBA7DEA00E3B7EF /* UIView+Layout.m */; };
 		636E048F1DBA880600E3B7EF /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636E048E1DBA880600E3B7EF /* Common.swift */; };
-		6374B4791DB7C77E0033D88E /* BlurEffectMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6374B4781DB7C77E0033D88E /* BlurEffectMenu.m */; };
 		6374B47D1DB7CABF0033D88E /* PhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6374B47C1DB7CABF0033D88E /* PhotosView.swift */; };
+		638843CA1DBBA1FC00AAE689 /* EmotionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638843C91DBBA1FC00AAE689 /* EmotionController.swift */; };
 		639191911DAD0F4D005B6C75 /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6391918F1DAD0F4D005B6C75 /* OAuthViewController.swift */; };
 		639191921DAD0F4D005B6C75 /* OAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 639191901DAD0F4D005B6C75 /* OAuthViewController.xib */; };
 		639191961DAD1396005B6C75 /* TitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639191941DAD1396005B6C75 /* TitleButton.swift */; };
@@ -98,7 +98,22 @@
 		63C025E41DABE45300AC447F /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C025D91DABE45300AC447F /* AFURLRequestSerialization.m */; };
 		63C025E51DABE45300AC447F /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C025DB1DABE45300AC447F /* AFURLResponseSerialization.m */; };
 		63C025E61DABE45300AC447F /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C025DD1DABE45300AC447F /* AFURLSessionManager.m */; };
-		63D3C9BE1D9ABDDD00761264 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63D3C9BC1D9ABDDD00761264 /* Main.storyboard */; };
+		63C73F551DBBC21300080115 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 63C73F3B1DBBC21300080115 /* Info.plist */; };
+		63C73F561DBBC21300080115 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C73F3D1DBBC21300080115 /* MASCompositeConstraint.m */; };
+		63C73F571DBBC21300080115 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C73F401DBBC21300080115 /* MASConstraint.m */; };
+		63C73F581DBBC21300080115 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C73F421DBBC21300080115 /* MASConstraintMaker.m */; };
+		63C73F591DBBC21300080115 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C73F441DBBC21300080115 /* MASLayoutConstraint.m */; };
+		63C73F5A1DBBC21300080115 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C73F481DBBC21300080115 /* MASViewAttribute.m */; };
+		63C73F5B1DBBC21300080115 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C73F4A1DBBC21300080115 /* MASViewConstraint.m */; };
+		63C73F5C1DBBC21300080115 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C73F4C1DBBC21300080115 /* NSArray+MASAdditions.m */; };
+		63C73F5D1DBBC21300080115 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C73F4F1DBBC21300080115 /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		63C73F5E1DBBC21300080115 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C73F511DBBC21300080115 /* View+MASAdditions.m */; };
+		63C73F5F1DBBC21300080115 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C73F541DBBC21300080115 /* ViewController+MASAdditions.m */; };
+		63C73F611DBBC54100080115 /* Emoticons.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 63C73F601DBBC54100080115 /* Emoticons.bundle */; };
+		63C73F641DBBC66500080115 /* EmotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C73F631DBBC66500080115 /* EmotionManager.swift */; };
+		63C73F661DBBC67C00080115 /* EmotionPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C73F651DBBC67C00080115 /* EmotionPackage.swift */; };
+		63C73F681DBBC6AE00080115 /* Emotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C73F671DBBC6AE00080115 /* Emotion.swift */; };
+		63C73F6A1DBBD63A00080115 /* EmoticonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C73F691DBBD63A00080115 /* EmoticonCell.swift */; };
 		63D3C9C01D9ABDDD00761264 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63D3C9BF1D9ABDDD00761264 /* Assets.xcassets */; };
 		63D3C9C31D9ABDDD00761264 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63D3C9C11D9ABDDD00761264 /* LaunchScreen.storyboard */; };
 		63D3C9CE1D9ABDDD00761264 /* ____Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D3C9CD1D9ABDDD00761264 /* ____Tests.swift */; };
@@ -236,10 +251,9 @@
 		636E04811DBA7DEA00E3B7EF /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
 		636E04821DBA7DEA00E3B7EF /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
 		636E048E1DBA880600E3B7EF /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
-		6374B4771DB7C77E0033D88E /* BlurEffectMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlurEffectMenu.h; sourceTree = "<group>"; };
-		6374B4781DB7C77E0033D88E /* BlurEffectMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlurEffectMenu.m; sourceTree = "<group>"; };
 		6374B47C1DB7CABF0033D88E /* PhotosView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosView.swift; sourceTree = "<group>"; };
-		6391918D1DAD04BF005B6C75 /* WeiBo-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "WeiBo-Bridging-Header.h"; path = "../../../WeiBo-Bridging-Header.h"; sourceTree = "<group>"; };
+		638843C91DBBA1FC00AAE689 /* EmotionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionController.swift; sourceTree = "<group>"; };
+		6391918D1DAD04BF005B6C75 /* WeiBo-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "WeiBo-Bridging-Header.h"; path = "../../WeiBo-Bridging-Header.h"; sourceTree = "<group>"; };
 		6391918F1DAD0F4D005B6C75 /* OAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthViewController.swift; sourceTree = "<group>"; };
 		639191901DAD0F4D005B6C75 /* OAuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OAuthViewController.xib; sourceTree = "<group>"; };
 		639191941DAD1396005B6C75 /* TitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleButton.swift; sourceTree = "<group>"; };
@@ -277,8 +291,38 @@
 		63C025DB1DABE45300AC447F /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		63C025DC1DABE45300AC447F /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		63C025DD1DABE45300AC447F /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		63C73F3B1DBBC21300080115 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63C73F3C1DBBC21300080115 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
+		63C73F3D1DBBC21300080115 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
+		63C73F3E1DBBC21300080115 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
+		63C73F3F1DBBC21300080115 /* MASConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraint.h; sourceTree = "<group>"; };
+		63C73F401DBBC21300080115 /* MASConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraint.m; sourceTree = "<group>"; };
+		63C73F411DBBC21300080115 /* MASConstraintMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraintMaker.h; sourceTree = "<group>"; };
+		63C73F421DBBC21300080115 /* MASConstraintMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraintMaker.m; sourceTree = "<group>"; };
+		63C73F431DBBC21300080115 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASLayoutConstraint.h; sourceTree = "<group>"; };
+		63C73F441DBBC21300080115 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASLayoutConstraint.m; sourceTree = "<group>"; };
+		63C73F451DBBC21300080115 /* Masonry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Masonry.h; sourceTree = "<group>"; };
+		63C73F461DBBC21300080115 /* MASUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASUtilities.h; sourceTree = "<group>"; };
+		63C73F471DBBC21300080115 /* MASViewAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewAttribute.h; sourceTree = "<group>"; };
+		63C73F481DBBC21300080115 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
+		63C73F491DBBC21300080115 /* MASViewConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewConstraint.h; sourceTree = "<group>"; };
+		63C73F4A1DBBC21300080115 /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
+		63C73F4B1DBBC21300080115 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		63C73F4C1DBBC21300080115 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		63C73F4D1DBBC21300080115 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		63C73F4E1DBBC21300080115 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		63C73F4F1DBBC21300080115 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		63C73F501DBBC21300080115 /* View+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASAdditions.h"; sourceTree = "<group>"; };
+		63C73F511DBBC21300080115 /* View+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "View+MASAdditions.m"; sourceTree = "<group>"; };
+		63C73F521DBBC21300080115 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		63C73F531DBBC21300080115 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
+		63C73F541DBBC21300080115 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		63C73F601DBBC54100080115 /* Emoticons.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Emoticons.bundle; sourceTree = "<group>"; };
+		63C73F631DBBC66500080115 /* EmotionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionManager.swift; sourceTree = "<group>"; };
+		63C73F651DBBC67C00080115 /* EmotionPackage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionPackage.swift; sourceTree = "<group>"; };
+		63C73F671DBBC6AE00080115 /* Emotion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emotion.swift; sourceTree = "<group>"; };
+		63C73F691DBBD63A00080115 /* EmoticonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmoticonCell.swift; sourceTree = "<group>"; };
 		63D3C9B51D9ABDDD00761264 /* 新浪微博.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "新浪微博.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		63D3C9BD1D9ABDDD00761264 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		63D3C9BF1D9ABDDD00761264 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../新浪微博/Assets.xcassets"; sourceTree = "<group>"; };
 		63D3C9C21D9ABDDD00761264 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63D3C9C41D9ABDDD00761264 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../新浪微博/Info.plist"; sourceTree = "<group>"; };
@@ -404,6 +448,7 @@
 		633A16841D9BF81300E79C46 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				6391918D1DAD04BF005B6C75 /* WeiBo-Bridging-Header.h */,
 				636E048E1DBA880600E3B7EF /* Common.swift */,
 				0F2833F31DB9A6AB0001F254 /* BaseViewController.swift */,
 				633A16881D9BF89100E79C46 /* AppDelegate.swift */,
@@ -425,6 +470,7 @@
 			children = (
 				635B44FD1DBA6F9D00D09112 /* PublishController.swift */,
 				635B44FE1DBA6F9D00D09112 /* PublishController.xib */,
+				638843C81DBBA1DA00AAE689 /* Emotion */,
 				635B44FA1DBA6F9D00D09112 /* IconCell */,
 				635B44FF1DBA6F9D00D09112 /* PublishTextView */,
 			);
@@ -608,13 +654,15 @@
 			path = TZImagePickerController;
 			sourceTree = "<group>";
 		};
-		6374B4761DB7C77E0033D88E /* BlurEffectMenu */ = {
+		638843C81DBBA1DA00AAE689 /* Emotion */ = {
 			isa = PBXGroup;
 			children = (
-				6374B4771DB7C77E0033D88E /* BlurEffectMenu.h */,
-				6374B4781DB7C77E0033D88E /* BlurEffectMenu.m */,
+				63C73F691DBBD63A00080115 /* EmoticonCell.swift */,
+				638843C91DBBA1FC00AAE689 /* EmotionController.swift */,
+				63C73F601DBBC54100080115 /* Emoticons.bundle */,
+				63C73F621DBBC64700080115 /* Model */,
 			);
-			path = BlurEffectMenu;
+			path = Emotion;
 			sourceTree = "<group>";
 		};
 		6391918E1DAD0F37005B6C75 /* OAuth */ = {
@@ -659,7 +707,6 @@
 			children = (
 				633BF98D1DB67E0900682917 /* NSDate-Extension.swift */,
 				0FB099701DB9B02B009068B4 /* NetWorkTool.swift */,
-				6391918D1DAD04BF005B6C75 /* WeiBo-Bridging-Header.h */,
 				639191931DAD1396005B6C75 /* UIButton扩展 */,
 			);
 			path = "Tools(工具类)";
@@ -677,8 +724,8 @@
 		63C025C91DABE44900AC447F /* Lib(第三方库) */ = {
 			isa = PBXGroup;
 			children = (
+				63C73F3A1DBBC21300080115 /* Masonry */,
 				636E046D1DBA7DEA00E3B7EF /* TZImagePickerController */,
-				6374B4761DB7C77E0033D88E /* BlurEffectMenu */,
 				635CF7611DB7A2C400399E2F /* MJRefresh */,
 				636897451DAD4B6C0068631E /* SDWebImage */,
 				6391919A1DAD1653005B6C75 /* SVProgressHUD */,
@@ -713,6 +760,49 @@
 			path = AFNetworking;
 			sourceTree = "<group>";
 		};
+		63C73F3A1DBBC21300080115 /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				63C73F3B1DBBC21300080115 /* Info.plist */,
+				63C73F3C1DBBC21300080115 /* MASCompositeConstraint.h */,
+				63C73F3D1DBBC21300080115 /* MASCompositeConstraint.m */,
+				63C73F3E1DBBC21300080115 /* MASConstraint+Private.h */,
+				63C73F3F1DBBC21300080115 /* MASConstraint.h */,
+				63C73F401DBBC21300080115 /* MASConstraint.m */,
+				63C73F411DBBC21300080115 /* MASConstraintMaker.h */,
+				63C73F421DBBC21300080115 /* MASConstraintMaker.m */,
+				63C73F431DBBC21300080115 /* MASLayoutConstraint.h */,
+				63C73F441DBBC21300080115 /* MASLayoutConstraint.m */,
+				63C73F451DBBC21300080115 /* Masonry.h */,
+				63C73F461DBBC21300080115 /* MASUtilities.h */,
+				63C73F471DBBC21300080115 /* MASViewAttribute.h */,
+				63C73F481DBBC21300080115 /* MASViewAttribute.m */,
+				63C73F491DBBC21300080115 /* MASViewConstraint.h */,
+				63C73F4A1DBBC21300080115 /* MASViewConstraint.m */,
+				63C73F4B1DBBC21300080115 /* NSArray+MASAdditions.h */,
+				63C73F4C1DBBC21300080115 /* NSArray+MASAdditions.m */,
+				63C73F4D1DBBC21300080115 /* NSArray+MASShorthandAdditions.h */,
+				63C73F4E1DBBC21300080115 /* NSLayoutConstraint+MASDebugAdditions.h */,
+				63C73F4F1DBBC21300080115 /* NSLayoutConstraint+MASDebugAdditions.m */,
+				63C73F501DBBC21300080115 /* View+MASAdditions.h */,
+				63C73F511DBBC21300080115 /* View+MASAdditions.m */,
+				63C73F521DBBC21300080115 /* View+MASShorthandAdditions.h */,
+				63C73F531DBBC21300080115 /* ViewController+MASAdditions.h */,
+				63C73F541DBBC21300080115 /* ViewController+MASAdditions.m */,
+			);
+			path = Masonry;
+			sourceTree = "<group>";
+		};
+		63C73F621DBBC64700080115 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				63C73F631DBBC66500080115 /* EmotionManager.swift */,
+				63C73F651DBBC67C00080115 /* EmotionPackage.swift */,
+				63C73F671DBBC6AE00080115 /* Emotion.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		63D3C9AC1D9ABDDD00761264 = {
 			isa = PBXGroup;
 			children = (
@@ -744,7 +834,6 @@
 		63D3C9CC1D9ABDDD00761264 /* 新浪微博Tests */ = {
 			isa = PBXGroup;
 			children = (
-				63D3C9BC1D9ABDDD00761264 /* Main.storyboard */,
 				63D3C9BF1D9ABDDD00761264 /* Assets.xcassets */,
 				63D3C9C11D9ABDDD00761264 /* LaunchScreen.storyboard */,
 				63D3C9C41D9ABDDD00761264 /* Info.plist */,
@@ -884,8 +973,9 @@
 				639191921DAD0F4D005B6C75 /* OAuthViewController.xib in Resources */,
 				635B45041DBA6F9D00D09112 /* PublishController.xib in Resources */,
 				635CF79C1DB7A2C400399E2F /* MJRefresh.bundle in Resources */,
-				63D3C9BE1D9ABDDD00761264 /* Main.storyboard in Resources */,
 				636E04871DBA7DEA00E3B7EF /* TZImagePickerController.bundle in Resources */,
+				63C73F551DBBC21300080115 /* Info.plist in Resources */,
+				63C73F611DBBC54100080115 /* Emoticons.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -912,8 +1002,10 @@
 			files = (
 				6368976D1DAD4B6C0068631E /* SDWebImageDownloaderOperation.m in Sources */,
 				636897731DAD4B6C0068631E /* UIImage+WebP.m in Sources */,
+				63C73F5A1DBBC21300080115 /* MASViewAttribute.m in Sources */,
 				6368976F1DAD4B6C0068631E /* SDWebImagePrefetcher.m in Sources */,
 				635CF7991DB7A2C400399E2F /* MJRefreshGifHeader.m in Sources */,
+				63C73F5C1DBBC21300080115 /* NSArray+MASAdditions.m in Sources */,
 				63C025E31DABE45300AC447F /* AFURLConnectionOperation.m in Sources */,
 				0F2833F41DB9A6AB0001F254 /* BaseViewController.swift in Sources */,
 				636897691DAD4B6C0068631E /* SDImageCache.m in Sources */,
@@ -930,9 +1022,9 @@
 				633A16891D9BF89100E79C46 /* AppDelegate.swift in Sources */,
 				635CF7931DB7A2C400399E2F /* MJRefreshAutoGifFooter.m in Sources */,
 				0FB0996F1DB9B018009068B4 /* UserAccountViewModel.swift in Sources */,
-				6374B4791DB7C77E0033D88E /* BlurEffectMenu.m in Sources */,
 				635CF7911DB7A2C400399E2F /* MJRefreshFooter.m in Sources */,
 				635B45031DBA6F9D00D09112 /* PublishController.swift in Sources */,
+				63C73F5B1DBBC21300080115 /* MASViewConstraint.m in Sources */,
 				635CF7921DB7A2C400399E2F /* MJRefreshHeader.m in Sources */,
 				633BF98E1DB67E0900682917 /* NSDate-Extension.swift in Sources */,
 				635CF78F1DB7A2C400399E2F /* MJRefreshBackFooter.m in Sources */,
@@ -942,16 +1034,20 @@
 				6368976A1DAD4B6C0068631E /* SDWebImageCompat.m in Sources */,
 				636E048C1DBA7DEA00E3B7EF /* TZVideoPlayerController.m in Sources */,
 				635CF79D1DB7A2C400399E2F /* MJRefreshConst.m in Sources */,
+				63C73F661DBBC67C00080115 /* EmotionPackage.swift in Sources */,
+				63C73F5E1DBBC21300080115 /* View+MASAdditions.m in Sources */,
 				630556091DAFF1E200E0B190 /* HomeCell.swift in Sources */,
 				631FC4831D9D48A600B83596 /* PopViewController.swift in Sources */,
 				63C025E41DABE45300AC447F /* AFURLRequestSerialization.m in Sources */,
 				6368976B1DAD4B6C0068631E /* SDWebImageDecoder.m in Sources */,
 				63C025E21DABE45300AC447F /* AFSecurityPolicy.m in Sources */,
+				63C73F591DBBC21300080115 /* MASLayoutConstraint.m in Sources */,
 				639191AB1DAD25D5005B6C75 /* UserAccount.swift in Sources */,
 				639191A91DAD1653005B6C75 /* SVRadialGradientLayer.m in Sources */,
 				633BF9901DB6828600682917 /* User.swift in Sources */,
 				635B45051DBA6F9D00D09112 /* PublishTextView.swift in Sources */,
 				636E048D1DBA7DEA00E3B7EF /* UIView+Layout.m in Sources */,
+				63C73F581DBBC21300080115 /* MASConstraintMaker.m in Sources */,
 				636897741DAD4B6C0068631E /* UIImageView+HighlightedWebCache.m in Sources */,
 				63C025DE1DABE45300AC447F /* AFHTTPRequestOperation.m in Sources */,
 				639191A81DAD1653005B6C75 /* SVProgressHUD.m in Sources */,
@@ -966,6 +1062,7 @@
 				636E04861DBA7DEA00E3B7EF /* TZImageManager.m in Sources */,
 				639191961DAD1396005B6C75 /* TitleButton.swift in Sources */,
 				636897721DAD4B6C0068631E /* UIImage+MultiFormat.m in Sources */,
+				63C73F6A1DBBD63A00080115 /* EmoticonCell.swift in Sources */,
 				635CF7961DB7A2C400399E2F /* MJRefreshBackGifFooter.m in Sources */,
 				63A501101D9C06AD001CB713 /* LoginView.swift in Sources */,
 				630556011DAFD11A00E0B190 /* WelcomeViewController.swift in Sources */,
@@ -976,16 +1073,23 @@
 				636897751DAD4B6C0068631E /* UIImageView+WebCache.m in Sources */,
 				636E04881DBA7DEA00E3B7EF /* TZImagePickerController.m in Sources */,
 				63C025E01DABE45300AC447F /* AFHTTPSessionManager.m in Sources */,
+				63C73F641DBBC66500080115 /* EmotionManager.swift in Sources */,
 				636897711DAD4B6C0068631E /* UIImage+GIF.m in Sources */,
 				6368976C1DAD4B6C0068631E /* SDWebImageDownloader.m in Sources */,
 				639191A51DAD1653005B6C75 /* SVIndefiniteAnimatedView.m in Sources */,
+				63C73F681DBBC6AE00080115 /* Emotion.swift in Sources */,
+				63C73F571DBBC21300080115 /* MASConstraint.m in Sources */,
 				635CF79F1DB7A2C400399E2F /* UIScrollView+MJRefresh.m in Sources */,
+				63C73F561DBBC21300080115 /* MASCompositeConstraint.m in Sources */,
+				638843CA1DBBA1FC00AAE689 /* EmotionController.swift in Sources */,
 				0FB099711DB9B02B009068B4 /* NetWorkTool.swift in Sources */,
 				636E048B1DBA7DEA00E3B7EF /* TZPhotoPreviewController.m in Sources */,
 				639191A61DAD1653005B6C75 /* SVProgressAnimatedView.m in Sources */,
 				635CF7951DB7A2C400399E2F /* MJRefreshAutoStateFooter.m in Sources */,
+				63C73F5F1DBBC21300080115 /* ViewController+MASAdditions.m in Sources */,
 				635CF7981DB7A2C400399E2F /* MJRefreshBackStateFooter.m in Sources */,
 				636E048A1DBA7DEA00E3B7EF /* TZPhotoPreviewCell.m in Sources */,
+				63C73F5D1DBBC21300080115 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				635CF79B1DB7A2C400399E2F /* MJRefreshStateHeader.m in Sources */,
 				635CF79A1DB7A2C400399E2F /* MJRefreshNormalHeader.m in Sources */,
 				636E04841DBA7DEA00E3B7EF /* TZAssetCell.m in Sources */,
@@ -1027,15 +1131,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		63D3C9BC1D9ABDDD00761264 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				63D3C9BD1D9ABDDD00761264 /* Base */,
-			);
-			name = Main.storyboard;
-			path = "../新浪微博";
-			sourceTree = "<group>";
-		};
 		63D3C9C11D9ABDDD00761264 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

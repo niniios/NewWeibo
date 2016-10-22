@@ -13,7 +13,7 @@
 #import "SVProgressHUD.h"
 #import "UIImageView+WebCache.h"
 #import "MJRefresh.h"
-#import "BlurEffectMenu.h"
 #import "TZImagePickerController.h"
+#import "Masonry.h"
 
 #endif /* WeiBo_Bridging_Header_h */
