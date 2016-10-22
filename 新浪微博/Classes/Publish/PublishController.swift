@@ -13,6 +13,11 @@ let iconCellId: String = "iconCellId"
 
 class PublishController: UIViewController {
     
+    //存放选中的图片数组
+    lazy var selectedImagesArray = [UIImage]()
+    
+    lazy var assetsArray = [Any]()
+    
     //文本输入框
     @IBOutlet weak var publishTextView: PublishTextView!
     //工具条距离底部的距离
@@ -24,12 +29,12 @@ class PublishController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupNavigationBar()
         
         //设置图片选择器的基本属性
         setupPicPickView()
-
+        
         //监听通知
         NotificationCenter.default.addObserver(self, selector: #selector(PublishController.keyboardWillChangeFrame(_:)), name: NSNotification.Name.UIKeyboardWillChangeFrame , object: nil)
         
@@ -37,7 +42,7 @@ class PublishController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(PublishController.pickIconAddButtonClick), name: NSNotification.Name(rawValue: PickIconAddButtonClickNotification) , object: nil)
     }
     
-
+    
     override func viewDidAppear(_ animated: Bool) {
         
         super.viewDidAppear(animated)
@@ -52,7 +57,7 @@ class PublishController: UIViewController {
         
         picPickViewHeight.constant = UIScreen.main.bounds.height * 0.65
         
-        UIView.animate(withDuration: 0.3) { 
+        UIView.animate(withDuration: 0.3) {
             
             self.view.layoutIfNeeded()
         }
@@ -66,17 +71,12 @@ class PublishController: UIViewController {
     }
 }
 
-extension PublishController: UIActionSheetDelegate {
-
-    
-
-}
 
 //MARK:- 导航栏的点击事件
 extension PublishController {
-
-    func setupNavigationBar (){
     
+    func setupNavigationBar (){
+        
         //设置标题
         navigationItem.title = "发微博"
         
@@ -103,7 +103,7 @@ extension PublishController {
 
 //MARK:- textView代理方法
 extension PublishController: UITextViewDelegate {
-
+    
     func textViewDidChange(_ textView: UITextView) {
         
         self.publishTextView.placeHolderLabel.isHidden = textView.hasText
@@ -118,7 +118,7 @@ extension PublishController: UITextViewDelegate {
 }
 
 extension PublishController {
-
+    
     //键盘位置改变事件
     @objc func keyboardWillChangeFrame(_ note: NSNotification) {
         
@@ -140,37 +140,31 @@ extension PublishController {
 
 
 //MARK:- 图片的添加和删除
-extension PublishController {
-
+extension PublishController: TZImagePickerControllerDelegate{
+    
     //添加图片按钮的点击事件
     func pickIconAddButtonClick() {
         
-        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let imagePickerVc = TZImagePickerController(maxImagesCount: 9, delegate: self)
         
-        let libraryAction = UIAlertAction(title: "进入相册", style: .default) { (_) in
-            
-            print("libraryAction")
-        }
+        present(imagePickerVc!, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: TZImagePickerController!, didFinishPickingPhotos photos: [UIImage]!, sourceAssets assets: [Any]!, isSelectOriginalPhoto: Bool) {
         
-        let creameAction = UIAlertAction(title: "打开相机", style: .default) { (_) in
-            
-            print("creameAction")
-        }
+        selectedImagesArray = photos
         
-        let cancelAction = UIAlertAction(title: "取消", style: .cancel) { (_) in
-            
-            print("cancelAction")
-            alertController.dismiss(animated: true, completion: nil)
-        }
+        assetsArray = assets
         
-        alertController.addAction(libraryAction)
-        alertController.addAction(creameAction)
-        alertController.addAction(cancelAction)
+        let addImage = UIImage(named: "compose_pic_add")
         
-        present(alertController, animated: true, completion: nil)
+        selectedImagesArray.append(addImage!)
         
+        picPickView.reloadData()
     }
 }
+
+
 
 //MARK:- UICollectionViewDataSource
 
@@ -195,21 +189,67 @@ extension PublishController:UICollectionViewDataSource {
         //设置内边距
         picPickView.contentInset = UIEdgeInsets(top: edgeMargin, left: edgeMargin, bottom: 0, right: edgeMargin)
     }
-
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
+        
         return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 1
+        if selectedImagesArray.count == 0 {
+            
+            return 1
+            
+        } else {
+        
+            return selectedImagesArray.count
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: iconCellId, for: indexPath) as! IconCell
         
-        return cell
+        if selectedImagesArray.count == 0 {
+            
+            return cell
+            
+        }else {
+        
+            cell.addButton.setBackgroundImage(selectedImagesArray[indexPath.item], for: .normal)
+            
+            return cell
+        
+        }
+    
     }
+    
+//    func collectionView(_ collectionView: UICollectionView, canMoveItemAt indexPath: IndexPath) -> Bool {
+//        
+//        return indexPath.item < selectedImagesArray.count - 1
+//        
+//    }
+    
+    /// 以下三个方法为长按排序相关代码
+//    - (BOOL)collectionView:(UICollectionView *)collectionView canMoveItemAtIndexPath:(NSIndexPath *)indexPath {
+//    return indexPath.item < _selectedPhotos.count;
+//    }
+//    
+//    - (BOOL)collectionView:(UICollectionView *)collectionView itemAtIndexPath:(NSIndexPath *)sourceIndexPath canMoveToIndexPath:(NSIndexPath *)destinationIndexPath {
+//    return (sourceIndexPath.item < _selectedPhotos.count && destinationIndexPath.item < _selectedPhotos.count);
+//    }
+//    
+//    - (void)collectionView:(UICollectionView *)collectionView itemAtIndexPath:(NSIndexPath *)sourceIndexPath didMoveToIndexPath:(NSIndexPath *)destinationIndexPath {
+//    UIImage *image = _selectedPhotos[sourceIndexPath.item];
+//    [_selectedPhotos removeObjectAtIndex:sourceIndexPath.item];
+//    [_selectedPhotos insertObject:image atIndex:destinationIndexPath.item];
+//    
+//    id asset = _selectedAssets[sourceIndexPath.item];
+//    [_selectedAssets removeObjectAtIndex:sourceIndexPath.item];
+//    [_selectedAssets insertObject:asset atIndex:destinationIndexPath.item];
+//    
+//    [_collectionView reloadData];
+//    }
 }
 
