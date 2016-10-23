@@ -29,13 +29,13 @@ extension PublishTextView {
         addSubview(placeHolderLabel)
         
         // 2.设置位置和尺寸
-        placeHolderLabel.frame = CGRect(x: 10, y: 10, width: 200, height: 15)
+        placeHolderLabel.frame = CGRect(x: 13, y: 13, width: 150, height: 15)
         
         // 3.设置Label的属性
         placeHolderLabel.text = "分享新鲜事..."
         placeHolderLabel.font = font
         placeHolderLabel.textColor = UIColor.lightGray       
         // 4.设置textView的左侧位置
-        textContainerInset = UIEdgeInsets(top: 8, left: 6, bottom: 0, right: 10)
+        textContainerInset = UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 8)
     }
 }

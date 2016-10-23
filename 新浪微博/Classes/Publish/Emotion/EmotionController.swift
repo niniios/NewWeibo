@@ -21,6 +21,23 @@ class EmotionController: UIViewController {
     //切换工具条
     lazy var toolBar: UIView = UIView()
     
+    //闭包属性
+    var emotionDidClickedCallBack: ((_ emotion : Emotion) -> Void)
+    
+    //重写控制器的构造函数必须调用  super.init(nibName: <#T##String?#>, bundle: <#T##Bundle?#>) 方法
+    init(emotionDidClickedCallBack: @escaping (_ emotion : Emotion) -> Void) {
+        
+        self.emotionDidClickedCallBack = emotionDidClickedCallBack
+        
+        super.init(nibName: nil, bundle: nil)
+        
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -62,6 +79,8 @@ extension EmotionController {
         
         collectionView.dataSource = self
         
+        collectionView.delegate = self
+        
         collectionView.isPagingEnabled = true
         
         collectionView.showsVerticalScrollIndicator = false
@@ -90,7 +109,7 @@ extension EmotionController {
     //设置toolBar的基本属性
     func prefareToolBar() {
     
-        let titles = ["最近", "默认", "emoji", "浪小花"]
+        let titles = ["默认", "emoji", "浪小花","删除"]
         
         var index: CGFloat = 0.0
         
@@ -103,31 +122,31 @@ extension EmotionController {
             button.tag = Int(index)
             button.setTitle(title, for: .normal)
             button.setTitleColor(UIColor.orange, for: .normal)
-            button.frame = CGRect(x: (index * optionCardWidth), y: 0, width: optionCardWidth, height: 44)
+            button.frame = CGRect(x: (index * optionCardWidth), y: 1, width: optionCardWidth, height: 43)
             button.addTarget(self, action: #selector(EmotionController.emotionOptionCardClick(button:)), for: .touchUpInside)
             index = index + 1.0
             toolBar.addSubview(button)
         }
+        
+        //添加一个分割线
+        let lineView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 1))
+        lineView.backgroundColor = UIColor.groupTableViewBackground
+        toolBar.addSubview(lineView)
     }
     
     //表情选项卡的点击效果
     func emotionOptionCardClick(button: UIButton){
-        //点击了最新分组
-        if button.tag == 0 {
-        
-            if manager.packageArray.first?.emotionArray.count != 0 {
-                
-                let indexPath = NSIndexPath(item: 0, section: button.tag)
-                
-                collectionView.selectItem(at: indexPath as IndexPath, animated: true, scrollPosition: .left)
-                
-            }
+        //惦记了选择表情
+        if button.tag != 3 {
             
-        } else{
-        
             let indexPath = NSIndexPath(item: 0, section: button.tag)
+            collectionView.scrollToItem(at: indexPath as IndexPath, at: .left, animated: true)
+        
+            //点击了删除按钮,发送删除字符的通知
+        } else {
             
-            collectionView.selectItem(at: indexPath as IndexPath, animated: true, scrollPosition: .left)
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: DeleteInputTextNotification), object: nil)
+            
         }
     }
 }
@@ -136,7 +155,6 @@ extension EmotionController: UICollectionViewDataSource, UICollectionViewDelegat
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         
-        print(manager.packageArray.count)
         return manager.packageArray.count
     }
 
@@ -157,6 +175,13 @@ extension EmotionController: UICollectionViewDataSource, UICollectionViewDelegat
         
         return cell
     }
-
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        //点击取出表情
+        let emoticon = manager.packageArray[indexPath.section].emotionArray[indexPath.item]
+        
+        emotionDidClickedCallBack(emoticon)
+    }
 }
 

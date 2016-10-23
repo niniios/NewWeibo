@@ -44,9 +44,7 @@ class Emotion: NSObject {
             
                 return
             }
-            
-            pngPath = Bundle.main.bundlePath + "/Emoticons.bundle/" + "" + png
-        
+            pngPath = Bundle.main.bundlePath + "/Emoticons.bundle/" + png
         }
     }
     
@@ -82,6 +80,5 @@ class Emotion: NSObject {
     override var description: String{
     
         return dictionaryWithValues(forKeys: ["emojiCode", "pngPath","chs"]).description
-    
     }
 }

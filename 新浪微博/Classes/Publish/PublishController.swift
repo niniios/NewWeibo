@@ -15,11 +15,7 @@ class PublishController: UIViewController {
     
     //存放选中的图片数组
     lazy var selectedImagesArray = [UIImage]()
-    
     lazy var selectedAssetsArray = [Any]()
-    
-    //表情键盘控制器
-    lazy var emotionController: EmotionController = EmotionController()
     
     //文本输入框
     @IBOutlet weak var publishTextView: PublishTextView!
@@ -29,6 +25,17 @@ class PublishController: UIViewController {
     @IBOutlet weak var picPickView: UICollectionView!
     //图片展示view的高度
     @IBOutlet weak var picPickViewHeight: NSLayoutConstraint!
+    
+    //表情键盘控制器
+    lazy var emotionController: EmotionController = EmotionController {[weak self] (emoticon) in
+        
+        self?.publishTextView.placeHolderLabel.isHidden = true
+        self?.navigationItem.rightBarButtonItem?.isEnabled = true
+        
+        //拿到表情，插入文本框
+        self?.publishTextView.insertEmoticon(emoticon: emoticon)
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,8 +48,19 @@ class PublishController: UIViewController {
         //监听通知
         NotificationCenter.default.addObserver(self, selector: #selector(PublishController.keyboardWillChangeFrame(_:)), name: NSNotification.Name.UIKeyboardWillChangeFrame , object: nil)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(PublishController.deleteInputText), name: NSNotification.Name(rawValue: DeleteInputTextNotification), object: nil)
+        
     }
-
+    
+    func deleteInputText() {
+        
+        if publishTextView.hasText ,publishTextView.attributedText.length > 0 {
+            
+            publishTextView.deleteBackward()
+        }
+    }
+    
+    
     override func viewDidAppear(_ animated: Bool) {
         
         super.viewDidAppear(animated)
@@ -55,7 +73,7 @@ class PublishController: UIViewController {
         //退出键盘
         publishTextView.resignFirstResponder()
         
-        picPickViewHeight.constant = UIScreen.main.bounds.height * 0.65
+        picPickViewHeight.constant = UIScreen.main.bounds.width + 44.0
         
         UIView.animate(withDuration: 0.3) {
             
@@ -102,13 +120,18 @@ extension PublishController {
     }
     
     func closePublishVC (){
-
+        
         publishTextView.resignFirstResponder()
         
         dismiss(animated: true, completion: nil)
     }
     
+    
+    //MARK:- 发送微博
     func publishStatus (){
+        
+        var text = publishTextView.resolveEmoticonString
+        
         
     }
 }
@@ -120,6 +143,10 @@ extension PublishController: UITextViewDelegate {
         
         self.publishTextView.placeHolderLabel.isHidden = textView.hasText
         navigationItem.rightBarButtonItem?.isEnabled = textView.hasText
+        
+        self.publishTextView.placeHolderLabel.isHidden = textView.attributedText.length > 0
+        
+        navigationItem.rightBarButtonItem?.isEnabled = textView.attributedText.length > 0
         
     }
     
@@ -172,6 +199,8 @@ extension PublishController:UICollectionViewDataSource, UICollectionViewDelegate
         
         //设置内边距
         picPickView.contentInset = UIEdgeInsets(top: edgeMargin, left: edgeMargin, bottom: 0, right: edgeMargin)
+        //设置不能滚动
+        picPickView.isScrollEnabled = false
     }
     
     //设置多少显示
@@ -204,7 +233,7 @@ extension PublishController:UICollectionViewDataSource, UICollectionViewDelegate
     //cell点击时间
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-    publishTextView.resignFirstResponder()
+        publishTextView.resignFirstResponder()
         if indexPath.row == selectedImagesArray.count {
             pushImagePickerController()
         }
@@ -231,7 +260,7 @@ extension PublishController: TZImagePickerControllerDelegate{
         selectedImagesArray = photos
         
         selectedAssetsArray = assets
-
+        
         
         picPickView.reloadData()
     }
@@ -242,13 +271,13 @@ extension PublishController: TZImagePickerControllerDelegate{
         publishTextView.resignFirstResponder()
         selectedImagesArray.remove(at: button.tag)
         selectedAssetsArray.remove(at: button.tag)
-        picPickView.performBatchUpdates({ 
+        picPickView.performBatchUpdates({
             
             let indexpath = NSIndexPath(row: button.tag, section: 0)
             self.picPickView.deleteItems(at: [indexpath as IndexPath])
             
-            }) { (_) in
-                self.picPickView.reloadData()
+        }) { (_) in
+            self.picPickView.reloadData()
         }
     }
 }

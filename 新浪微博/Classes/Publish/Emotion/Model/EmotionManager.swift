@@ -14,9 +14,6 @@ class EmotionManager: NSObject {
     var packageArray: [EmotionPackage] = [EmotionPackage]()
     
     override init() {
-        
-        //1，添加最近使用表情的包
-        packageArray.append(EmotionPackage(id: ""))
             
         //1，默认表情的包
         packageArray.append(EmotionPackage(id: "com.sina.default"))
@@ -26,6 +23,9 @@ class EmotionManager: NSObject {
                     
         //1，添加最近使用表情的包
         packageArray.append(EmotionPackage(id: "com.sina.lxh"))
+        
+        //1，添加删除的包
+        packageArray.append(EmotionPackage(id: ""))
         
     }
     

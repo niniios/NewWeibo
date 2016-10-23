@@ -21,8 +21,10 @@
 		631FC4861D9D48E800B83596 /* CustomPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631FC4851D9D48E800B83596 /* CustomPresentationController.swift */; };
 		633A16871D9BF84400E79C46 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633A16861D9BF84400E79C46 /* HomeViewController.swift */; };
 		633A16891D9BF89100E79C46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633A16881D9BF89100E79C46 /* AppDelegate.swift */; };
-		633BF98E1DB67E0900682917 /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633BF98D1DB67E0900682917 /* NSDate-Extension.swift */; };
 		633BF9901DB6828600682917 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633BF98F1DB6828600682917 /* User.swift */; };
+		6347DCB31DBCD5860055659A /* EmoticonAttrchment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347DCB21DBCD5860055659A /* EmoticonAttrchment.swift */; };
+		6347DCB61DBCD87B0055659A /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347DCB51DBCD87B0055659A /* NSDate-Extension.swift */; };
+		6347DCB91DBCD8AC0055659A /* UITextView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347DCB81DBCD8AC0055659A /* UITextView+Extension.swift */; };
 		635B45011DBA6F9D00D09112 /* IconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635B44FB1DBA6F9D00D09112 /* IconCell.swift */; };
 		635B45031DBA6F9D00D09112 /* PublishController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635B44FD1DBA6F9D00D09112 /* PublishController.swift */; };
 		635B45041DBA6F9D00D09112 /* PublishController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 635B44FE1DBA6F9D00D09112 /* PublishController.xib */; };
@@ -152,8 +154,10 @@
 		631FC4851D9D48E800B83596 /* CustomPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPresentationController.swift; sourceTree = "<group>"; };
 		633A16861D9BF84400E79C46 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		633A16881D9BF89100E79C46 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		633BF98D1DB67E0900682917 /* NSDate-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
 		633BF98F1DB6828600682917 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		6347DCB21DBCD5860055659A /* EmoticonAttrchment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmoticonAttrchment.swift; sourceTree = "<group>"; };
+		6347DCB51DBCD87B0055659A /* NSDate-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
+		6347DCB81DBCD8AC0055659A /* UITextView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+Extension.swift"; sourceTree = "<group>"; };
 		635B44FB1DBA6F9D00D09112 /* IconCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconCell.swift; sourceTree = "<group>"; };
 		635B44FD1DBA6F9D00D09112 /* PublishController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishController.swift; sourceTree = "<group>"; };
 		635B44FE1DBA6F9D00D09112 /* PublishController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PublishController.xib; sourceTree = "<group>"; };
@@ -465,6 +469,22 @@
 			path = Other;
 			sourceTree = "<group>";
 		};
+		6347DCB41DBCD87B0055659A /* NSDate(扩展) */ = {
+			isa = PBXGroup;
+			children = (
+				6347DCB51DBCD87B0055659A /* NSDate-Extension.swift */,
+			);
+			path = "NSDate(扩展)";
+			sourceTree = "<group>";
+		};
+		6347DCB71DBCD8980055659A /* UITextView(扩展) */ = {
+			isa = PBXGroup;
+			children = (
+				6347DCB81DBCD8AC0055659A /* UITextView+Extension.swift */,
+			);
+			path = "UITextView(扩展)";
+			sourceTree = "<group>";
+		};
 		635B44F91DBA6F9D00D09112 /* Publish */ = {
 			isa = PBXGroup;
 			children = (
@@ -657,6 +677,7 @@
 		638843C81DBBA1DA00AAE689 /* Emotion */ = {
 			isa = PBXGroup;
 			children = (
+				6347DCB21DBCD5860055659A /* EmoticonAttrchment.swift */,
 				63C73F691DBBD63A00080115 /* EmoticonCell.swift */,
 				638843C91DBBA1FC00AAE689 /* EmotionController.swift */,
 				63C73F601DBBC54100080115 /* Emoticons.bundle */,
@@ -705,8 +726,9 @@
 		63A501091D9BFD2A001CB713 /* Tools(工具类) */ = {
 			isa = PBXGroup;
 			children = (
-				633BF98D1DB67E0900682917 /* NSDate-Extension.swift */,
 				0FB099701DB9B02B009068B4 /* NetWorkTool.swift */,
+				6347DCB71DBCD8980055659A /* UITextView(扩展) */,
+				6347DCB41DBCD87B0055659A /* NSDate(扩展) */,
 				639191931DAD1396005B6C75 /* UIButton扩展 */,
 			);
 			path = "Tools(工具类)";
@@ -1004,6 +1026,7 @@
 				636897731DAD4B6C0068631E /* UIImage+WebP.m in Sources */,
 				63C73F5A1DBBC21300080115 /* MASViewAttribute.m in Sources */,
 				6368976F1DAD4B6C0068631E /* SDWebImagePrefetcher.m in Sources */,
+				6347DCB31DBCD5860055659A /* EmoticonAttrchment.swift in Sources */,
 				635CF7991DB7A2C400399E2F /* MJRefreshGifHeader.m in Sources */,
 				63C73F5C1DBBC21300080115 /* NSArray+MASAdditions.m in Sources */,
 				63C025E31DABE45300AC447F /* AFURLConnectionOperation.m in Sources */,
@@ -1026,7 +1049,6 @@
 				635B45031DBA6F9D00D09112 /* PublishController.swift in Sources */,
 				63C73F5B1DBBC21300080115 /* MASViewConstraint.m in Sources */,
 				635CF7921DB7A2C400399E2F /* MJRefreshHeader.m in Sources */,
-				633BF98E1DB67E0900682917 /* NSDate-Extension.swift in Sources */,
 				635CF78F1DB7A2C400399E2F /* MJRefreshBackFooter.m in Sources */,
 				6374B47D1DB7CABF0033D88E /* PhotosView.swift in Sources */,
 				636897761DAD4B6C0068631E /* UIView+WebCacheOperation.m in Sources */,
@@ -1038,6 +1060,7 @@
 				63C73F5E1DBBC21300080115 /* View+MASAdditions.m in Sources */,
 				630556091DAFF1E200E0B190 /* HomeCell.swift in Sources */,
 				631FC4831D9D48A600B83596 /* PopViewController.swift in Sources */,
+				6347DCB61DBCD87B0055659A /* NSDate-Extension.swift in Sources */,
 				63C025E41DABE45300AC447F /* AFURLRequestSerialization.m in Sources */,
 				6368976B1DAD4B6C0068631E /* SDWebImageDecoder.m in Sources */,
 				63C025E21DABE45300AC447F /* AFSecurityPolicy.m in Sources */,
@@ -1048,6 +1071,7 @@
 				635B45051DBA6F9D00D09112 /* PublishTextView.swift in Sources */,
 				636E048D1DBA7DEA00E3B7EF /* UIView+Layout.m in Sources */,
 				63C73F581DBBC21300080115 /* MASConstraintMaker.m in Sources */,
+				6347DCB91DBCD8AC0055659A /* UITextView+Extension.swift in Sources */,
 				636897741DAD4B6C0068631E /* UIImageView+HighlightedWebCache.m in Sources */,
 				63C025DE1DABE45300AC447F /* AFHTTPRequestOperation.m in Sources */,
 				639191A81DAD1653005B6C75 /* SVProgressHUD.m in Sources */,

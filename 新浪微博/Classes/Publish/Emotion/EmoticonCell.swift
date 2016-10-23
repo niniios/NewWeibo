@@ -21,7 +21,7 @@ class EmoticonCell: UICollectionViewCell {
             //设置删除按钮
             if emoticon.isRemove {
                 
-                button.setImage(UIImage(named:"compose_pic_add_highlighted"), for: .normal)
+                button.setImage(UIImage(named:"emoticon_delete"), for: .normal)
                 
             } else {
             

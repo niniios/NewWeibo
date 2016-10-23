@@ -17,34 +17,25 @@ class EmotionPackage: NSObject {
         
         //最近使用的表情
         if id == ""{
-            
             return
         }
         
         //根据文件名拼接路径
         let infoPath = Bundle.main.path(forResource: "\(id)/info.plist", ofType: nil, inDirectory: "Emoticons.bundle")!
         
-        let array = NSArray(contentsOfFile: infoPath)! as! [[String: String]]
+        guard let array = NSArray(contentsOfFile: infoPath)! as? [[String: String]] else {
         
-        var index = 0
+            return
+        }
         
         for var dict in array {
-            
+
             if let png = dict["png"] {
                 
                 dict["png"] = id + "/" + png
             }
             
             emotionArray.append(Emotion(dict: dict))
-            index = index + 1
-            
-            if index == 21 {
-                
-                //添加删除表情
-                emotionArray.append(Emotion(isRemove: true))
-                index = 0
-                
-            }
         }
     }
 }
