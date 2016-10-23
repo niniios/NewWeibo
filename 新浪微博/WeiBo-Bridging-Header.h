@@ -15,5 +15,6 @@
 #import "MJRefresh.h"
 #import "TZImagePickerController.h"
 #import "Masonry.h"
+#import "JPLabel.h"
 
 #endif /* WeiBo_Bridging_Header_h */

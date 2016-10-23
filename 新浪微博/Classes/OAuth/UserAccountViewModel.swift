@@ -53,14 +53,12 @@ extension UserAccountViewModel {
         NetWorkTool.shareInstance.loadAccessToken(code: codeString) { (result, error) -> () in
             // 1.错误校验
             if error != nil {
-                print(error)
                 isSuccess(false)
                 return
             }
             
             // 2.获取结果,并且将结果转成模型对象
             guard let accountDict = result else {
-                print("没有获取到账号信息")
                 isSuccess(false)
                 return
             }
@@ -85,14 +83,12 @@ extension UserAccountViewModel {
         NetWorkTool.shareInstance.loadUserInfo(access_token: accessToken, uid: uid) { (result, error) -> () in
             // 2.1.错误校验
             if error != nil {
-                print(error)
                 isSuccess(false)
                 return
             }
             
             // 2.2.判断字典是否有值
             guard let userInfoDict = result else {
-                print("没有获取到用户信息")
                 isSuccess(false)
                 return
             }

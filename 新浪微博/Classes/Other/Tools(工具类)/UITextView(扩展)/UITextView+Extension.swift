@@ -28,6 +28,8 @@ extension UITextView{
         //创建属性字符串
         let attachment = EmoticonAttrchment()
         
+        attachment.chs = emoticon.chs
+        
         attachment.image = UIImage(contentsOfFile: emoticon.pngPath!)
         
         let font =  self.font!
@@ -55,16 +57,17 @@ extension UITextView{
     }
     //解析表情
     func resolveEmoticonString() -> String {
-    
+        
         //获取属性字符串
         let attrMString = NSMutableAttributedString(attributedString: attributedText)
         
         let range = NSRange(location: 0, length: attrMString.length)
         
+        
         attrMString.enumerateAttributes(in: range, options: []) { (dict, range, _) in
             
             //用户输入了表情,将表情和chs兑换
-            if let attrahment = dict["NSAttrchemt"] as? EmoticonAttrchment {
+            if let attrahment = dict["NSAttachment"] as? EmoticonAttrchment {
                 
                 attrMString.replaceCharacters(in: range, with: attrahment.chs!)
             }

@@ -23,13 +23,14 @@ class PhotoCell: UICollectionViewCell {
             let iconView: UIImageView = UIImageView()
             
             //设置iconView的基本属性
-            iconView.sd_setImage(with: picUrl, placeholderImage: UIImage(named: "empty_picture"))
             
             let itemWH = (UIScreen.main.bounds.width - 2.0 * 15.0 - 2.0 * 5.0) / 3.0
             
             iconView.frame = CGRect(x: 0, y: 0, width: itemWH, height: itemWH)
             
-            iconView.contentMode = UIViewContentMode.scaleToFill
+            iconView.sd_setImage(with: picUrl, placeholderImage: UIImage(named: "empty_picture"))
+            
+            iconView.contentMode = UIViewContentMode.scaleAspectFill
             
             contentView.addSubview(iconView)
         }

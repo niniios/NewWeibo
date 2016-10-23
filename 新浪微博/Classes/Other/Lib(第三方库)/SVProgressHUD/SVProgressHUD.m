@@ -342,7 +342,7 @@ static const CGFloat SVProgressHUDDefaultAnimationDuration = 0.15;
         
         // Set default values
         _defaultMaskType = SVProgressHUDMaskTypeNone;
-        _defaultStyle = SVProgressHUDStyleLight;
+        _defaultStyle = SVProgressHUDStyleDark;
         _defaultAnimationType = SVProgressHUDAnimationTypeFlat;
         
         if ([UIFont respondsToSelector:@selector(preferredFontForTextStyle:)]) {
@@ -375,7 +375,7 @@ static const CGFloat SVProgressHUDDefaultAnimationDuration = 0.15;
         
         _cornerRadius = 14.0f;
         
-        _minimumDismissTimeInterval = 5.0;
+        _minimumDismissTimeInterval = 2.0;
 
         _fadeInAnimationDuration = SVProgressHUDDefaultAnimationDuration;
         _fadeOutAnimationDuration = SVProgressHUDDefaultAnimationDuration;

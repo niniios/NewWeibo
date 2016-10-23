@@ -81,7 +81,9 @@ class HomeCell: UITableViewCell {
             sourceLabel.text = viewModel.sourceString
             
             //正文
-            contentLabel.text = viewModel.status?.text
+            let statusText =  viewModel.status?.text
+            
+            contentLabel.attributedText = FindEmoticon.shareIntance.findAttrString(statusText: statusText, font: contentLabel.font)
             
             //设置转发微博的正文
             if viewModel.status?.retweeted_status != nil {
@@ -89,7 +91,9 @@ class HomeCell: UITableViewCell {
                 if let screenName = viewModel.status?.retweeted_status?.user?.screen_name ,
                     let retweetedText = viewModel.status?.retweeted_status?.text {
                     
-                    retweetedContentLabel.text = "@"+"\(screenName): " + retweetedText
+                    let retweetedContenText = "@"+"\(screenName): " + retweetedText
+                    
+                    retweetedContentLabel.attributedText = FindEmoticon.shareIntance.findAttrString(statusText: retweetedContenText, font: retweetedContentLabel.font)
                     //设置转发正文距离顶部的约束
                     retweetedContentLabelTopConstraint.constant = 15
                 }
@@ -207,7 +211,7 @@ extension HomeCell {
         //四张配图
         if count == 4 {
             
-            let photosViewWH = itemWH * 2 + 5.0
+            let photosViewWH = itemWH * 2 + 8.0
             return CGSize(width: photosViewWH, height: photosViewWH)
         }
         

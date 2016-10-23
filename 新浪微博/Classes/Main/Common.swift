@@ -20,3 +20,13 @@ let HomeCellMoreOperationNotification = "HomeCellMoreOperationNotification"
 
 //发布界面工具条点击删除按钮的通知
 let DeleteInputTextNotification = "DeleteInputTextNotification"
+//成功发布微博后的通知
+let SuccessSendStatusNotification = "SuccessSendStatusNotification"
+
+
+//点击cell中图片的通知
+let ShowPhotoBrowserNotification = "ShowPhotoBrowserNotification"
+//具体的 indexPath
+let ShowPhotoBrowserIndexPathKey = "ShowPhotoBrowserIndexPathKey"
+//图片地址数组
+let ShowPhotoBrowserUrlArrayKey = "ShowPhotoBrowserUrlArray"

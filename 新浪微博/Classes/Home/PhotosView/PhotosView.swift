@@ -20,12 +20,13 @@ class PhotosView: UICollectionView {
     override func awakeFromNib() {
         
         dataSource = self
+        delegate = self
         //注册Cell
         register(PhotoCell.self, forCellWithReuseIdentifier: "PhotoCell")
     }
 }
-// MARK:- 数据源
-extension PhotosView: UICollectionViewDataSource {
+// MARK:- 数据源和代理
+extension PhotosView: UICollectionViewDataSource, UICollectionViewDelegate{
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
@@ -41,6 +42,14 @@ extension PhotosView: UICollectionViewDataSource {
         cell.picUrl = picUrls[indexPath.item]
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let showPhotoBrowserInfo = [ShowPhotoBrowserIndexPathKey: indexPath, ShowPhotoBrowserUrlArrayKey: picUrls] as [String : Any]
+        
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: ShowPhotoBrowserNotification), object: showPhotoBrowserInfo)
+        
     }
 }
 

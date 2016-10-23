@@ -34,7 +34,18 @@ class StatusViewModel: NSObject {
             
             let startIndex = (source as NSString).range(of: ">").location + 1
             let length = (source as NSString).range(of: "</").location - startIndex
-            sourceString = "来自" + (source as NSString).substring(with: NSRange(location: startIndex, length: length))
+            
+            let realSource =  (source as NSString).substring(with: NSRange(location: startIndex, length: length))
+            
+            if realSource == "未通过审核应用" {
+                
+                sourceString = "来自火星CoderYQ的iPhone7Plus"
+                
+            } else {
+                
+                sourceString = "来自" + realSource
+            }
+            
         }
         //处理时间
         if let created_at = status.created_at {
@@ -77,7 +88,7 @@ class StatusViewModel: NSObject {
         if let picUrlDicts = picUrlDicts {
             //遍历数组，拿到字典
             for picUrlDict in picUrlDicts {
-            
+                
                 guard let picUrlString = picUrlDict["thumbnail_pic"] else {
                     continue
                 }

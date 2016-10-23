@@ -13,6 +13,9 @@ let iconCellId: String = "iconCellId"
 
 class PublishController: UIViewController {
     
+    //记录是否是第一次进入控制器的标识
+    var isPushKeyboard: Bool = true
+    
     //存放选中的图片数组
     lazy var selectedImagesArray = [UIImage]()
     lazy var selectedAssetsArray = [Any]()
@@ -29,8 +32,7 @@ class PublishController: UIViewController {
     //表情键盘控制器
     lazy var emotionController: EmotionController = EmotionController {[weak self] (emoticon) in
         
-        self?.publishTextView.placeHolderLabel.isHidden = true
-        self?.navigationItem.rightBarButtonItem?.isEnabled = true
+        self?.textViewDidChange(self!.publishTextView)
         
         //拿到表情，插入文本框
         self?.publishTextView.insertEmoticon(emoticon: emoticon)
@@ -64,7 +66,13 @@ class PublishController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         
         super.viewDidAppear(animated)
-        publishTextView.becomeFirstResponder()
+        
+        if isPushKeyboard {
+        
+            publishTextView.becomeFirstResponder()
+            isPushKeyboard = false
+        }
+        
     }
     
     //工具条点击弹出图片容器事件
@@ -130,9 +138,46 @@ extension PublishController {
     //MARK:- 发送微博
     func publishStatus (){
         
-        var text = publishTextView.resolveEmoticonString
+        //退出键盘
+        publishTextView.resignFirstResponder()
         
+        //显示提示框
+        SVProgressHUD.show(withStatus: "发送中...")
         
+        let text = publishTextView.resolveEmoticonString
+        
+        let image = selectedImagesArray.first
+        
+        //定义回调显示闭包
+        let showResultCallBack = {(isSuccess: Bool) -> () in
+        
+            SVProgressHUD.dismiss()
+            
+            if isSuccess {
+                
+                SVProgressHUD.showSuccess(withStatus: "发送成功")
+                
+                self.dismiss(animated: true, completion: {
+                    
+                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: SuccessSendStatusNotification), object: nil)
+                })
+                
+            } else {
+                
+                SVProgressHUD.showError(withStatus: "发送失败")
+            }
+        }
+        
+        //带有图片的微博
+        if image != nil {
+            
+            NetWorkTool.shareInstance.sendStatus(statusText: text(), image: image!, isSuccess: showResultCallBack)
+            
+            //没有文字的微博
+        } else {
+            
+            NetWorkTool.shareInstance.sendStatus(statusText: text(), isSuccess: showResultCallBack)
+        }
     }
 }
 

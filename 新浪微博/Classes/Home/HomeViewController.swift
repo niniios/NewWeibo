@@ -33,6 +33,11 @@ class HomeViewController: BaseViewController {
         
         //注册首页更多操作的通知 HomeCellMoreOperationNotification
         NotificationCenter.default.addObserver(self, selector: #selector(HomeViewController.moreOperation), name: NSNotification.Name(rawValue: HomeCellMoreOperationNotification) , object: nil)
+        
+        //发布微博成功，刷新首页数据
+//        NotificationCenter.default.addObserver(self, selector: #selector(HomeViewController.refreshButtonClick), name: NSNotification.Name(rawValue: SuccessSendStatusNotification) , object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(HomeViewController.showPhotoBrowser(notiInfo:)), name: NSNotification.Name(rawValue: ShowPhotoBrowserNotification) , object: nil)
     }
 }
 
@@ -80,11 +85,7 @@ extension HomeViewController {
     
     func refreshButtonClick(){
         
-        loadNewStatus()
-        
-        tableView.scrollsToTop = true
-        
-        tableView.setContentOffset(CGPoint(x: 0, y: -70), animated: true)
+        tableView.mj_header.beginRefreshing()
     }
     
     //顶部右边发表按钮点击事件
@@ -120,7 +121,7 @@ extension HomeViewController  {
         
         tableView.mj_header = header
         //进入界面就开始加载数据
-//        tableView.mj_header.beginRefreshing()
+        //        tableView.mj_header.beginRefreshing()
         
         //创建上拉加载更多控件
         let footer = MJRefreshAutoNormalFooter(refreshingTarget: self, refreshingAction: #selector(HomeViewController.loadOldStatus))
@@ -204,10 +205,9 @@ extension HomeViewController {
         NetWorkTool.shareInstance.loadStatuses(since_id: since_id, max_id: max_id) { (result, error) in
             //错误校验
             if error != nil{
-                
-                print(error)
                 //停止刷新
                 self.tableView.mj_header.endRefreshing()
+                self.showTiplabel(count: 0, isError: true)
                 return
             }
             
@@ -215,6 +215,7 @@ extension HomeViewController {
                 
                 //停止刷新
                 self.tableView.mj_header.endRefreshing()
+                self.showTiplabel(count: 0, isError: true)
                 return
             }
             
@@ -232,7 +233,7 @@ extension HomeViewController {
             //刷新表格
             self.tableView.reloadData()
             //显示提示信息
-            self.showTiplabel(count: tempViewModel.count)
+            self.showTiplabel(count: tempViewModel.count, isError: false)
             self.tableView.mj_header.endRefreshing()
         }
     }
@@ -250,8 +251,6 @@ extension HomeViewController {
         NetWorkTool.shareInstance.loadStatuses(since_id: since_id, max_id: max_id) { (result, error) in
             //错误校验
             if error != nil{
-                
-                print(error)
                 //停止刷新
                 self.tableView.mj_footer.endRefreshing()
                 
@@ -283,9 +282,16 @@ extension HomeViewController {
     }
     
     ///显示提示的文本框
-    func showTiplabel(count: Int) {
+    func showTiplabel(count: Int, isError: Bool) {
         
-        count == 0 ? (tipLabel.text = "暂时没有新数据") : (tipLabel.text = "更新了\(count)条新微博")
+        if isError {
+            
+            tipLabel.text = "微博接口访问次数达到上限！"
+            
+        } else {
+            
+            count == 0 ? (tipLabel.text = "暂时没有新数据") : (tipLabel.text = "更新了\(count)条新微博")
+        }
         
         tipLabel.isHidden = false
         
@@ -317,21 +323,20 @@ extension HomeViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if viewModelArray.count > 0 {
-            
             let cell =  HomeCell.cellWithTableView(tableView)
             
             cell.viewModel = viewModelArray[indexPath.row]
-            
+        
             return cell
-            
-        } else {
-            
-            let cell = UITableViewCell()
-            
-            return cell
-            
-        }
+    }
+}
+
+//MARK:- 弹出照片浏览器的通知事件
+extension HomeViewController {
+
+    func showPhotoBrowser(notiInfo: Notification) {
+    
+        print(notiInfo)
     }
 }
 
@@ -339,23 +344,23 @@ extension HomeViewController {
 extension HomeViewController {
     
     func moreOperation() {
-    
+        
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
         let collectAction = UIAlertAction(title: "收藏", style: .default) { (_) in
-
+            
         }
         
         let helpAction = UIAlertAction(title: "帮上头条", style: .default) { (_) in
-
+            
         }
         
         let shieldAction = UIAlertAction(title: "屏蔽", style: .default) { (_) in
-
+            
         }
         
         let cancelAction = UIAlertAction(title: "取消", style: .cancel) { (_) in
-
+            
             alertController.dismiss(animated: true, completion: nil)
         }
         

@@ -25,6 +25,8 @@
 		6347DCB31DBCD5860055659A /* EmoticonAttrchment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347DCB21DBCD5860055659A /* EmoticonAttrchment.swift */; };
 		6347DCB61DBCD87B0055659A /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347DCB51DBCD87B0055659A /* NSDate-Extension.swift */; };
 		6347DCB91DBCD8AC0055659A /* UITextView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347DCB81DBCD8AC0055659A /* UITextView+Extension.swift */; };
+		6347DCBD1DBD08540055659A /* FindEmoticon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347DCBC1DBD08540055659A /* FindEmoticon.swift */; };
+		6347DCC41DBD1AE30055659A /* JPLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6347DCC31DBD1AE30055659A /* JPLabel.m */; };
 		635B45011DBA6F9D00D09112 /* IconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635B44FB1DBA6F9D00D09112 /* IconCell.swift */; };
 		635B45031DBA6F9D00D09112 /* PublishController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635B44FD1DBA6F9D00D09112 /* PublishController.swift */; };
 		635B45041DBA6F9D00D09112 /* PublishController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 635B44FE1DBA6F9D00D09112 /* PublishController.xib */; };
@@ -158,6 +160,9 @@
 		6347DCB21DBCD5860055659A /* EmoticonAttrchment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmoticonAttrchment.swift; sourceTree = "<group>"; };
 		6347DCB51DBCD87B0055659A /* NSDate-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
 		6347DCB81DBCD8AC0055659A /* UITextView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+Extension.swift"; sourceTree = "<group>"; };
+		6347DCBC1DBD08540055659A /* FindEmoticon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindEmoticon.swift; sourceTree = "<group>"; };
+		6347DCC21DBD1AE30055659A /* JPLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPLabel.h; sourceTree = "<group>"; };
+		6347DCC31DBD1AE30055659A /* JPLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPLabel.m; sourceTree = "<group>"; };
 		635B44FB1DBA6F9D00D09112 /* IconCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconCell.swift; sourceTree = "<group>"; };
 		635B44FD1DBA6F9D00D09112 /* PublishController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishController.swift; sourceTree = "<group>"; };
 		635B44FE1DBA6F9D00D09112 /* PublishController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PublishController.xib; sourceTree = "<group>"; };
@@ -393,8 +398,9 @@
 		630556031DAFEAC900E0B190 /* HomeModel(微博模型) */ = {
 			isa = PBXGroup;
 			children = (
-				630556041DAFEADD00E0B190 /* Status.swift */,
+				6347DCBC1DBD08540055659A /* FindEmoticon.swift */,
 				633BF98F1DB6828600682917 /* User.swift */,
+				630556041DAFEADD00E0B190 /* Status.swift */,
 				6395F5F11DB687C50020A3CE /* StatusViewModel.swift */,
 			);
 			name = "HomeModel(微博模型)";
@@ -440,6 +446,7 @@
 			isa = PBXGroup;
 			children = (
 				633A16861D9BF84400E79C46 /* HomeViewController.swift */,
+				63CCE5F91DBD228E0073531D /* PhotoBrowser */,
 				0FA58B061DB739C700215374 /* PhotoCell(单张配图) */,
 				0FA58B091DB739C700215374 /* PhotosView(配图控件) */,
 				630556061DAFF1CA00E0B190 /* HomeCell(微博Cell) */,
@@ -452,8 +459,8 @@
 		633A16841D9BF81300E79C46 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				6391918D1DAD04BF005B6C75 /* WeiBo-Bridging-Header.h */,
 				636E048E1DBA880600E3B7EF /* Common.swift */,
+				6391918D1DAD04BF005B6C75 /* WeiBo-Bridging-Header.h */,
 				0F2833F31DB9A6AB0001F254 /* BaseViewController.swift */,
 				633A16881D9BF89100E79C46 /* AppDelegate.swift */,
 			);
@@ -483,6 +490,15 @@
 				6347DCB81DBCD8AC0055659A /* UITextView+Extension.swift */,
 			);
 			path = "UITextView(扩展)";
+			sourceTree = "<group>";
+		};
+		6347DCC11DBD1AE30055659A /* JPLabel */ = {
+			isa = PBXGroup;
+			children = (
+				6347DCC21DBD1AE30055659A /* JPLabel.h */,
+				6347DCC31DBD1AE30055659A /* JPLabel.m */,
+			);
+			path = JPLabel;
 			sourceTree = "<group>";
 		};
 		635B44F91DBA6F9D00D09112 /* Publish */ = {
@@ -746,6 +762,7 @@
 		63C025C91DABE44900AC447F /* Lib(第三方库) */ = {
 			isa = PBXGroup;
 			children = (
+				6347DCC11DBD1AE30055659A /* JPLabel */,
 				63C73F3A1DBBC21300080115 /* Masonry */,
 				636E046D1DBA7DEA00E3B7EF /* TZImagePickerController */,
 				635CF7611DB7A2C400399E2F /* MJRefresh */,
@@ -823,6 +840,13 @@
 				63C73F671DBBC6AE00080115 /* Emotion.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		63CCE5F91DBD228E0073531D /* PhotoBrowser */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PhotoBrowser;
 			sourceTree = "<group>";
 		};
 		63D3C9AC1D9ABDDD00761264 = {
@@ -1051,6 +1075,7 @@
 				635CF7921DB7A2C400399E2F /* MJRefreshHeader.m in Sources */,
 				635CF78F1DB7A2C400399E2F /* MJRefreshBackFooter.m in Sources */,
 				6374B47D1DB7CABF0033D88E /* PhotosView.swift in Sources */,
+				6347DCC41DBD1AE30055659A /* JPLabel.m in Sources */,
 				636897761DAD4B6C0068631E /* UIView+WebCacheOperation.m in Sources */,
 				63C025E51DABE45300AC447F /* AFURLResponseSerialization.m in Sources */,
 				6368976A1DAD4B6C0068631E /* SDWebImageCompat.m in Sources */,
@@ -1075,6 +1100,7 @@
 				636897741DAD4B6C0068631E /* UIImageView+HighlightedWebCache.m in Sources */,
 				63C025DE1DABE45300AC447F /* AFHTTPRequestOperation.m in Sources */,
 				639191A81DAD1653005B6C75 /* SVProgressHUD.m in Sources */,
+				6347DCBD1DBD08540055659A /* FindEmoticon.swift in Sources */,
 				63C025E61DABE45300AC447F /* AFURLSessionManager.m in Sources */,
 				635B45011DBA6F9D00D09112 /* IconCell.swift in Sources */,
 				0FA58B141DB7420000215374 /* PhotoCell.swift in Sources */,

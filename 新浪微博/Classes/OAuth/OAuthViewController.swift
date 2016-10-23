@@ -103,7 +103,6 @@ extension OAuthViewController: UIWebViewDelegate {
         
         // 1.获取URL的字符串
         guard let urlString = request.url?.absoluteString else {
-            print("没有获取到字符串")
             return true
         }
         // 2.判断是否有code,如果没有,则继续加载
@@ -112,7 +111,6 @@ extension OAuthViewController: UIWebViewDelegate {
         }
         // 3.截取code
         guard let codeString = urlString.components(separatedBy: "code=").last else {
-            print("没有获取到code")
             return true
         }
         // 4.用code换取accessToken
