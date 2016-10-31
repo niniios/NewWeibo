@@ -30,7 +30,10 @@ class PhotoCell: UICollectionViewCell {
             
             iconView.sd_setImage(with: picUrl, placeholderImage: UIImage(named: "empty_picture"))
             
+            //设置图片的填充为全部填充并且裁剪掉多余部分
             iconView.contentMode = UIViewContentMode.scaleAspectFill
+            
+            iconView.clipsToBounds = true
             
             contentView.addSubview(iconView)
         }

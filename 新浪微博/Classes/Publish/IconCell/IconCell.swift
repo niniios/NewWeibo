@@ -30,6 +30,8 @@ class IconCell: UICollectionViewCell {
     func setupUI()  {
         
         iconView.frame = CGRect(x: 0, y: 0, width: itemWH, height: itemWH)
+        iconView.contentMode = .scaleAspectFill
+        iconView.clipsToBounds = true
         addSubview(iconView)
         
         deleteButton.frame = CGRect(x: itemWH - 20, y: -5, width: 25, height: 25)

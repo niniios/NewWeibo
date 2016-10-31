@@ -35,9 +35,9 @@ class HomeViewController: BaseViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(HomeViewController.moreOperation), name: NSNotification.Name(rawValue: HomeCellMoreOperationNotification) , object: nil)
         
         //发布微博成功，刷新首页数据
-//        NotificationCenter.default.addObserver(self, selector: #selector(HomeViewController.refreshButtonClick), name: NSNotification.Name(rawValue: SuccessSendStatusNotification) , object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(HomeViewController.refreshButtonClick), name: NSNotification.Name(rawValue: SuccessSendStatusNotification) , object: nil)
         
-        NotificationCenter.default.addObserver(self, selector: #selector(HomeViewController.showPhotoBrowser(notiInfo:)), name: NSNotification.Name(rawValue: ShowPhotoBrowserNotification) , object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(HomeViewController.showPhotoBrowser(noti:)), name: NSNotification.Name(rawValue: ShowPhotoBrowserNotification) , object: nil)
     }
 }
 
@@ -121,7 +121,7 @@ extension HomeViewController  {
         
         tableView.mj_header = header
         //进入界面就开始加载数据
-        //        tableView.mj_header.beginRefreshing()
+        tableView.mj_header.beginRefreshing()
         
         //创建上拉加载更多控件
         let footer = MJRefreshAutoNormalFooter(refreshingTarget: self, refreshingAction: #selector(HomeViewController.loadOldStatus))
@@ -334,9 +334,18 @@ extension HomeViewController {
 //MARK:- 弹出照片浏览器的通知事件
 extension HomeViewController {
 
-    func showPhotoBrowser(notiInfo: Notification) {
+    func showPhotoBrowser(noti: Notification) {
     
-        print(notiInfo)
+        let indexPath = noti.userInfo?[ShowPhotoBrowserIndexPathKey]! as! IndexPath
+        
+        //取出图片
+        let picUrls = noti.userInfo?[ShowPhotoBrowserUrlArrayKey]! as! [URL]
+        
+        //创建控制器
+        let browserVC = PhotoBr0wserController(inexPahth: indexPath, urls: picUrls)
+        
+        present(browserVC, animated: true, completion: nil)
+        
     }
 }
 

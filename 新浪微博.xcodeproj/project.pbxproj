@@ -91,6 +91,7 @@
 		639191A91DAD1653005B6C75 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 639191A41DAD1653005B6C75 /* SVRadialGradientLayer.m */; };
 		639191AB1DAD25D5005B6C75 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639191AA1DAD25D5005B6C75 /* UserAccount.swift */; };
 		6395F5F21DB687C50020A3CE /* StatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6395F5F11DB687C50020A3CE /* StatusViewModel.swift */; };
+		639B2D6C1DBE3EA50021C8E5 /* PhotoBr0wserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639B2D6B1DBE3EA50021C8E5 /* PhotoBr0wserController.swift */; };
 		63A501101D9C06AD001CB713 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A5010F1D9C06AD001CB713 /* LoginView.swift */; };
 		63A501121D9C06CD001CB713 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63A501111D9C06CD001CB713 /* LoginView.xib */; };
 		63C025DE1DABE45300AC447F /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C025CC1DABE45300AC447F /* AFHTTPRequestOperation.m */; };
@@ -279,6 +280,7 @@
 		639191A41DAD1653005B6C75 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
 		639191AA1DAD25D5005B6C75 /* UserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
 		6395F5F11DB687C50020A3CE /* StatusViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewModel.swift; sourceTree = "<group>"; };
+		639B2D6B1DBE3EA50021C8E5 /* PhotoBr0wserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoBr0wserController.swift; sourceTree = "<group>"; };
 		63A5010F1D9C06AD001CB713 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		63A501111D9C06CD001CB713 /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
 		63C025CB1DABE45300AC447F /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -845,6 +847,7 @@
 		63CCE5F91DBD228E0073531D /* PhotoBrowser */ = {
 			isa = PBXGroup;
 			children = (
+				639B2D6B1DBE3EA50021C8E5 /* PhotoBr0wserController.swift */,
 			);
 			path = PhotoBrowser;
 			sourceTree = "<group>";
@@ -1103,6 +1106,7 @@
 				6347DCBD1DBD08540055659A /* FindEmoticon.swift in Sources */,
 				63C025E61DABE45300AC447F /* AFURLSessionManager.m in Sources */,
 				635B45011DBA6F9D00D09112 /* IconCell.swift in Sources */,
+				639B2D6C1DBE3EA50021C8E5 /* PhotoBr0wserController.swift in Sources */,
 				0FA58B141DB7420000215374 /* PhotoCell.swift in Sources */,
 				639191911DAD0F4D005B6C75 /* OAuthViewController.swift in Sources */,
 				635CF78E1DB7A2C400399E2F /* MJRefreshAutoFooter.m in Sources */,

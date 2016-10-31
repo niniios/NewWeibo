@@ -48,8 +48,7 @@ extension PhotosView: UICollectionViewDataSource, UICollectionViewDelegate{
         
         let showPhotoBrowserInfo = [ShowPhotoBrowserIndexPathKey: indexPath, ShowPhotoBrowserUrlArrayKey: picUrls] as [String : Any]
         
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: ShowPhotoBrowserNotification), object: showPhotoBrowserInfo)
-        
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: ShowPhotoBrowserNotification), object: nil, userInfo: showPhotoBrowserInfo)
     }
 }
 
