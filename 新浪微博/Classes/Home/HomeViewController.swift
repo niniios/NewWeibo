@@ -335,15 +335,15 @@ extension HomeViewController {
 
     func showPhotoBrowser(noti: Notification) {
     
-        let indexPath = noti.userInfo?[ShowPhotoBrowserIndexPathKey]! as! IndexPath
-        
-        //取出图片
-        let picUrls = noti.userInfo?[ShowPhotoBrowserUrlArrayKey]! as! [URL]
-        
-        //创建控制器
-        let browserVC = PhotoBr0wserController(inexPahth: indexPath, urls: picUrls)
-        
-        present(browserVC, animated: true, completion: nil)
+//        let indexPath = noti.userInfo?[ShowPhotoBrowserIndexPathKey]! as! IndexPath
+//        
+//        //取出图片
+//        let picUrls = noti.userInfo?[ShowPhotoBrowserUrlArrayKey]! as! [URL]
+//        
+//        //创建控制器
+//        let browserVC = PhotoBr0wserController(inexPahth: indexPath, urls: picUrls)
+//        
+//        present(browserVC, animated: true, completion: nil)
         
     }
 }

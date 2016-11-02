@@ -15,7 +15,6 @@ class PhotoBr0wserController: UIViewController {
     var picUrls: [URL]
     
     
-    
     //图片数组
     init(inexPahth: IndexPath, urls: [URL]){
     

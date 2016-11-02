@@ -29,6 +29,7 @@ class RotationGifRefreshHesder: MJRefreshGifHeader {
             let image = UIImage(named: "gif\(22 - i)")
             
             images.append(image!)
+            images = images + images
         }
         
         self.setImages(images, for: .idle)
