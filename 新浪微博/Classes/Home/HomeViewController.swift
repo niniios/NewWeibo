@@ -113,11 +113,8 @@ extension HomeViewController  {
         tableView.estimatedRowHeight = 200
         
         //创建下拉刷新控件
-        let header = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: #selector(HomeViewController.loadNewStatus))
+        let header = RotationGifRefreshHesder(refreshingTarget: self, refreshingAction: #selector(HomeViewController.loadNewStatus))
         
-        header?.setTitle("下拉刷新", for:.idle)
-        header?.setTitle("释放刷新", for:.pulling)
-        header?.setTitle("加载中...", for: .refreshing)
         
         tableView.mj_header = header
         //进入界面就开始加载数据
@@ -125,6 +122,8 @@ extension HomeViewController  {
         
         //创建上拉加载更多控件
         let footer = MJRefreshAutoNormalFooter(refreshingTarget: self, refreshingAction: #selector(HomeViewController.loadOldStatus))
+        
+        footer?.stateLabel.isHidden = true
         tableView.mj_footer = footer
         
         

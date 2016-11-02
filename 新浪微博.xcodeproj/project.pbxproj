@@ -123,6 +123,7 @@
 		63D3C9C31D9ABDDD00761264 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63D3C9C11D9ABDDD00761264 /* LaunchScreen.storyboard */; };
 		63D3C9CE1D9ABDDD00761264 /* ____Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D3C9CD1D9ABDDD00761264 /* ____Tests.swift */; };
 		63D3C9D91D9ABDDD00761264 /* ____UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D3C9D81D9ABDDD00761264 /* ____UITests.swift */; };
+		63E994E11DCA187C001C50E1 /* GifRefreshHesder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E994E01DCA187C001C50E1 /* GifRefreshHesder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -343,6 +344,7 @@
 		63D3C9D41D9ABDDD00761264 /* 新浪微博UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "新浪微博UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63D3C9D81D9ABDDD00761264 /* ____UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "____UITests.swift"; sourceTree = "<group>"; };
 		63D3C9DA1D9ABDDE00761264 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63E994E01DCA187C001C50E1 /* GifRefreshHesder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifRefreshHesder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -448,6 +450,7 @@
 			isa = PBXGroup;
 			children = (
 				633A16861D9BF84400E79C46 /* HomeViewController.swift */,
+				63FF972E1DCA059F0040C87C /* RefreshHeader */,
 				63CCE5F91DBD228E0073531D /* PhotoBrowser */,
 				0FA58B061DB739C700215374 /* PhotoCell(单张配图) */,
 				0FA58B091DB739C700215374 /* PhotosView(配图控件) */,
@@ -901,6 +904,14 @@
 			path = "新浪微博UITests";
 			sourceTree = "<group>";
 		};
+		63FF972E1DCA059F0040C87C /* RefreshHeader */ = {
+			isa = PBXGroup;
+			children = (
+				63E994E01DCA187C001C50E1 /* GifRefreshHesder.swift */,
+			);
+			path = RefreshHeader;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1100,6 +1111,7 @@
 				636E048D1DBA7DEA00E3B7EF /* UIView+Layout.m in Sources */,
 				63C73F581DBBC21300080115 /* MASConstraintMaker.m in Sources */,
 				6347DCB91DBCD8AC0055659A /* UITextView+Extension.swift in Sources */,
+				63E994E11DCA187C001C50E1 /* GifRefreshHesder.swift in Sources */,
 				636897741DAD4B6C0068631E /* UIImageView+HighlightedWebCache.m in Sources */,
 				63C025DE1DABE45300AC447F /* AFHTTPRequestOperation.m in Sources */,
 				639191A81DAD1653005B6C75 /* SVProgressHUD.m in Sources */,

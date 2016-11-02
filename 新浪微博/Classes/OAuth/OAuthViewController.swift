@@ -63,8 +63,6 @@ extension OAuthViewController {
     func rightBarButtonDidClick() {
         
         //书写JS代码
-        let jsCode = "document.getElementById('userId').value = 18883316269;"
-        webView.stringByEvaluatingJavaScript(from: jsCode)
     }
     
     //关闭按钮点击事件
