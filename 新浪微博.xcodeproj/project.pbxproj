@@ -91,6 +91,8 @@
 		639191AB1DAD25D5005B6C75 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639191AA1DAD25D5005B6C75 /* UserAccount.swift */; };
 		6395F5F21DB687C50020A3CE /* StatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6395F5F11DB687C50020A3CE /* StatusViewModel.swift */; };
 		639974C81DCCACBA001C02BA /* HYLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639974C71DCCACBA001C02BA /* HYLabel.swift */; };
+		639974CC1DCCB305001C02BA /* WebController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639974CA1DCCB305001C02BA /* WebController.swift */; };
+		639974CD1DCCB305001C02BA /* WebController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 639974CB1DCCB305001C02BA /* WebController.xib */; };
 		639B2D6C1DBE3EA50021C8E5 /* PhotoBr0wserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639B2D6B1DBE3EA50021C8E5 /* PhotoBr0wserController.swift */; };
 		63A501101D9C06AD001CB713 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A5010F1D9C06AD001CB713 /* LoginView.swift */; };
 		63A501121D9C06CD001CB713 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63A501111D9C06CD001CB713 /* LoginView.xib */; };
@@ -280,6 +282,8 @@
 		639191AA1DAD25D5005B6C75 /* UserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
 		6395F5F11DB687C50020A3CE /* StatusViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewModel.swift; sourceTree = "<group>"; };
 		639974C71DCCACBA001C02BA /* HYLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYLabel.swift; sourceTree = "<group>"; };
+		639974CA1DCCB305001C02BA /* WebController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebController.swift; sourceTree = "<group>"; };
+		639974CB1DCCB305001C02BA /* WebController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebController.xib; sourceTree = "<group>"; };
 		639B2D6B1DBE3EA50021C8E5 /* PhotoBr0wserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoBr0wserController.swift; sourceTree = "<group>"; };
 		63A5010F1D9C06AD001CB713 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		63A501111D9C06CD001CB713 /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
@@ -449,6 +453,7 @@
 			isa = PBXGroup;
 			children = (
 				633A16861D9BF84400E79C46 /* HomeViewController.swift */,
+				639974C91DCCB2EF001C02BA /* WebController */,
 				63FF972E1DCA059F0040C87C /* RefreshHeader */,
 				63CCE5F91DBD228E0073531D /* PhotoBrowser */,
 				0FA58B061DB739C700215374 /* PhotoCell(单张配图) */,
@@ -742,6 +747,15 @@
 			path = HYLabel;
 			sourceTree = "<group>";
 		};
+		639974C91DCCB2EF001C02BA /* WebController */ = {
+			isa = PBXGroup;
+			children = (
+				639974CA1DCCB305001C02BA /* WebController.swift */,
+				639974CB1DCCB305001C02BA /* WebController.xib */,
+			);
+			path = WebController;
+			sourceTree = "<group>";
+		};
 		63A501091D9BFD2A001CB713 /* Tools(工具类) */ = {
 			isa = PBXGroup;
 			children = (
@@ -1029,6 +1043,7 @@
 				63A501121D9C06CD001CB713 /* LoginView.xib in Resources */,
 				630556021DAFD11A00E0B190 /* WelcomeViewController.xib in Resources */,
 				639191921DAD0F4D005B6C75 /* OAuthViewController.xib in Resources */,
+				639974CD1DCCB305001C02BA /* WebController.xib in Resources */,
 				635B45041DBA6F9D00D09112 /* PublishController.xib in Resources */,
 				635CF79C1DB7A2C400399E2F /* MJRefresh.bundle in Resources */,
 				636E04871DBA7DEA00E3B7EF /* TZImagePickerController.bundle in Resources */,
@@ -1124,6 +1139,7 @@
 				636E048F1DBA880600E3B7EF /* Common.swift in Sources */,
 				636E04861DBA7DEA00E3B7EF /* TZImageManager.m in Sources */,
 				639191961DAD1396005B6C75 /* TitleButton.swift in Sources */,
+				639974CC1DCCB305001C02BA /* WebController.swift in Sources */,
 				636897721DAD4B6C0068631E /* UIImage+MultiFormat.m in Sources */,
 				63C73F6A1DBBD63A00080115 /* EmoticonCell.swift in Sources */,
 				635CF7961DB7A2C400399E2F /* MJRefreshBackGifFooter.m in Sources */,

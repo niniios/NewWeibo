@@ -343,8 +343,11 @@ extension HomeViewController {
         
         // 监听链接的点击
         label.linkTapHandler = { (label, link, range) in
-            print(link)
-            print(range)
+
+            let webVC = WebController.init(urlString: link)
+            
+            self.navigationController?.pushViewController(webVC, animated: true)
+            
         }
         
         // 监听话题的点击

@@ -24,7 +24,6 @@ class PhotoBr0wserController: UIViewController {
         
         super.init(nibName: nil, bundle: nil)
         
-        
     }
     
     required init?(coder aDecoder: NSCoder) {
