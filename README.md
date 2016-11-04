@@ -1,4 +1,4 @@
-# A app which is similar to sina's app home page(Swift版高仿新浪微博首页的应用)
+# A app which is similar to sina's app home page
 ![(logo)](https://github.com/CoderYQ/NewWeibo/blob/master/ScreenImages/05.png)
 * A app which is similar to sina's app home page writed in Swift3.0
 
@@ -25,6 +25,8 @@
 * larger images to view
 
 ## 中文版
+
+# Swift版高仿新浪微博首页的应用
 
 ### 已经实现的功能
 * 使用OAuth2.0h注册登录
