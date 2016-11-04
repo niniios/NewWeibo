@@ -4,8 +4,8 @@
 * 一款模仿新浪微博首页的Swift应用
   
   ## Contents
-* Getting Started
-    * [Features【支持哪些控件的刷新】](#支持哪些控件的刷新)
+* Realized Function
+    * [Use OAuth2.0 to register and login【使用OAuth2.0授权注册登录】](#使用OAuth2.0授权注册登录)
     * [Installation【如何使用MJRefresh】](#如何使用MJRefresh)
     * [Who's using【已经超过上百个App正在使用MJRefresh】](#已经超过上百个App正在使用MJRefresh)
     * [Classes【MJRefresh类结构图】](#MJRefresh类结构图)
