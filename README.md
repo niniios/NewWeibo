@@ -3,12 +3,10 @@
 * A app which is similar to sina's app home page writed in Swift3.0
 * 一款模仿新浪微博首页的Swift应用
   
-  ## Contents
-* Realized Function
-        * [Use OAuth2.0 to register and login【使用OAuth2.0授权注册登录】](#使用OAuth2.0授权注册登录)
-        * [Installation【如何使用MJRefresh】](#如何使用MJRefresh)
-        * [Who's using【已经超过上百个App正在使用MJRefresh】](#已经超过上百个App正在使用MJRefresh)
-        * [Classes【MJRefresh类结构图】](#MJRefresh类结构图)
+### 框架的作用
+* 用于识别Label中的@用户-话题##-链接
+* 框架地址:[https://github.com/coderwhy/HYLabel](https://github.com/coderwhy/HYLabel)
+
 * 常见API
 	* [MJRefreshComponent.h](#MJRefreshComponent.h)
 	* [MJRefreshHeader.h](#MJRefreshHeader.h)
