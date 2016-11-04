@@ -1,4 +1,4 @@
-# A app which is similar to sina's app home page
+# A app which is similar to sina's app home page(Swift版高仿新浪微博首页的应用)
 ![(logo)](https://github.com/CoderYQ/NewWeibo/blob/master/ScreenImages/05.png)
 * A app which is similar to sina's app home page writed in Swift3.0
 
