@@ -4,7 +4,7 @@
 * 一款模仿新浪微博首页的Swift应用
 
   ## Contents
-* Realized function（目前已经实现的功能）
+* Realized function
     * [Features【支持哪些控件的刷新】](#支持哪些控件的刷新)
     * [Installation【如何使用MJRefresh】](#如何使用MJRefresh)
     * [Who's using【已经超过上百个App正在使用MJRefresh】](#已经超过上百个App正在使用MJRefresh)
