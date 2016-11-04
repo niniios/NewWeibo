@@ -3,7 +3,7 @@
 * A app which is similar to sina's app home page writed in Swift3.0
 * 一款模仿新浪微博首页的Swift应用
 
-## Contents
+  ## Contents
 * Realized function（目前已经实现的功能）
     * [Features【支持哪些控件的刷新】](#支持哪些控件的刷新)
     * [Installation【如何使用MJRefresh】](#如何使用MJRefresh)
