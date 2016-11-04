@@ -107,6 +107,7 @@ class PublishController: UIViewController {
     deinit {
         
         NotificationCenter.default.removeObserver(self)
+        SVProgressHUD.dismiss()
     }
 }
 
