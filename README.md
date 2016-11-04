@@ -1,19 +1,19 @@
 # Swift版高仿新浪微博首页
 ![(logo)](https://github.com/CoderYQ/NewWeibo/blob/master/ScreenImages/05.png)
-* 
+* A app which is similar to sina's app home page writed in Swift3.0
 * 一款模仿新浪微博首页的Swift应用
 
 ## Contents
-* Getting Started
-    * [Features【支持哪些控件的刷新】](#支持哪些控件的刷新)
-    * [Installation【如何使用MJRefresh】](#如何使用MJRefresh)
-    * [Who's using【已经超过上百个App正在使用MJRefresh】](#已经超过上百个App正在使用MJRefresh)
-    * [Classes【MJRefresh类结构图】](#MJRefresh类结构图)
+* Realized Function（目前实现的功能）
+    * [Features【支持哪些控件的刷新】]
+    * [Installation【如何使用MJRefresh】]
+    * [Who's using【已经超过上百个App正在使用MJRefresh】]
+    * [Classes【MJRefresh类结构图】]
 * 常见API
-	* [MJRefreshComponent.h](#MJRefreshComponent.h)
-	* [MJRefreshHeader.h](#MJRefreshHeader.h)
-	* [MJRefreshFooter.h](#MJRefreshFooter.h)
-	* [MJRefreshAutoFooter.h](#MJRefreshAutoFooter.h)
+	* [MJRefreshComponent.h]
+	* [MJRefreshHeader.h]
+	* [MJRefreshFooter.h]
+	* [MJRefreshAutoFooter.h]
 * Examples
     * [Reference【参考】](#参考)
     * [下拉刷新01-默认](#下拉刷新01-默认)
