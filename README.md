@@ -3,10 +3,10 @@
 * A app which is similar to sina's app home page writed in Swift3.0
 * 一款模仿新浪微博首页的Swift应用
   
-### 框架的作用
-* 用于识别Label中的@用户-话题##-链接
-* 框架地址:[https://github.com/coderwhy/HYLabel](https://github.com/coderwhy/HYLabel)
-
+### Realized function（目前已经实现的功能）
+* use OAuth2.0 to register and login(使用OAuth2.0授权注册登)
+* show user's latest messages【显示登录用户最新的微博消息】
+* show peope's latest messages which user has followed【显示登录用户关注人的微博消息】
 * 常见API
 	* [MJRefreshComponent.h](#MJRefreshComponent.h)
 	* [MJRefreshHeader.h](#MJRefreshHeader.h)
