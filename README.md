@@ -1,7 +1,7 @@
-# Swift版高仿新浪微博
-![(logo)](http://images.cnitblog.com/blog2015/497279/201505/051004492043385.png)
-* An easy way to use pull-to-refresh
-* 用法简单的下拉刷新框架：一行代码搞定
+# Swift版高仿新浪微博首页
+![(logo)](https://github.com/CoderYQ/NewWeibo/blob/master/ScreenImages/05.png)
+* 
+* 一款模仿新浪微博首页的Swift应用
 
 ## Contents
 * Getting Started
