@@ -46,10 +46,12 @@
 
 ### 还需要实现的功能
 * 数据缓存
-* 大图s展示
+* 大图展示
 
 ### Pictures Preview
 ![image](https://github.com/CoderYQ/NewWeibo/blob/master/ScreenImages/01.png)
 ![image](https://github.com/CoderYQ/NewWeibo/blob/master/ScreenImages/02.png)
 ![image](https://github.com/CoderYQ/NewWeibo/blob/master/ScreenImages/03.png)
 ![image](https://github.com/CoderYQ/NewWeibo/blob/master/ScreenImages/04.png)
+![image](https://github.com/CoderYQ/NewWeibo/blob/master/ScreenImages/05.png)
+![image](https://github.com/CoderYQ/NewWeibo/blob/master/ScreenImages/06.png)
