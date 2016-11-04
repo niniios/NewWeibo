@@ -55,3 +55,6 @@
 ![image](https://github.com/CoderYQ/NewWeibo/blob/master/ScreenImages/04.png)
 ![image](https://github.com/CoderYQ/NewWeibo/blob/master/ScreenImages/05.png)
 ![image](https://github.com/CoderYQ/NewWeibo/blob/master/ScreenImages/06.png)
+
+### 我的博客
+[CoderYQ的博客](http://www.jianshu.com/users/aa9cdd3e7cd3/latest_articles)
