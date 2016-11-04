@@ -1,5 +1,5 @@
 # A app which is similar to sina's app home page
-![(logo)](https://github.com/CoderYQ/NewWeibo/blob/master/ScreenImages/05.png)
+![(logo)](https://github.com/CoderYQ/NewWeibo/blob/master/ScreenImages/logo.png)
 * A app which is similar to sina's app home page writed in Swift3.0
 
 ## Engish
