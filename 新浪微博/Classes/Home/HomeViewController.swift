@@ -298,16 +298,16 @@ extension HomeViewController {
             
             self.tipLabel.frame.origin.y = 44
             
+        }, completion: { (_) in
+            
+            UIView.animate(withDuration: 0.8, delay: 0.8, options: [], animations: {
+                
+                self.tipLabel.frame.origin.y = 10
+                
             }, completion: { (_) in
                 
-                UIView.animate(withDuration: 0.8, delay: 0.8, options: [], animations: {
-                    
-                    self.tipLabel.frame.origin.y = 10
-                    
-                    }, completion: { (_) in
-                        
-                        self.tipLabel.isHidden = true
-                })
+                self.tipLabel.isHidden = true
+            })
         })
     }
 }
@@ -322,28 +322,53 @@ extension HomeViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-            let cell =  HomeCell.cellWithTableView(tableView)
-            
-            cell.viewModel = viewModelArray[indexPath.row]
+        let cell =  HomeCell.cellWithTableView(tableView)
         
-            return cell
+        cell.viewModel = viewModelArray[indexPath.row]
+        
+        self.wordDidClicked(label: cell.contentLabel)
+        
+        self.wordDidClicked(label: cell.retweetedContentLabel)
+        
+        return cell
+    }
+    
+    func wordDidClicked(label: HYLabel) {
+        
+        // 监听@谁谁谁的点击
+        label.userTapHandler = { (label, user, range) in
+            print(user)
+            print(range)
+        }
+        
+        // 监听链接的点击
+        label.linkTapHandler = { (label, link, range) in
+            print(link)
+            print(range)
+        }
+        
+        // 监听话题的点击
+        label.topicTapHandler = { (label, topic, range) in
+            print(topic)
+            print(range)
+        }
     }
 }
 
 //MARK:- 弹出照片浏览器的通知事件
 extension HomeViewController {
-
-    func showPhotoBrowser(noti: Notification) {
     
-//        let indexPath = noti.userInfo?[ShowPhotoBrowserIndexPathKey]! as! IndexPath
-//        
-//        //取出图片
-//        let picUrls = noti.userInfo?[ShowPhotoBrowserUrlArrayKey]! as! [URL]
-//        
-//        //创建控制器
-//        let browserVC = PhotoBr0wserController(inexPahth: indexPath, urls: picUrls)
-//        
-//        present(browserVC, animated: true, completion: nil)
+    func showPhotoBrowser(noti: Notification) {
+        
+        //        let indexPath = noti.userInfo?[ShowPhotoBrowserIndexPathKey]! as! IndexPath
+        //
+        //        //取出图片
+        //        let picUrls = noti.userInfo?[ShowPhotoBrowserUrlArrayKey]! as! [URL]
+        //
+        //        //创建控制器
+        //        let browserVC = PhotoBr0wserController(inexPahth: indexPath, urls: picUrls)
+        //
+        //        present(browserVC, animated: true, completion: nil)
         
     }
 }

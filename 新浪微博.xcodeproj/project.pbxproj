@@ -26,7 +26,6 @@
 		6347DCB61DBCD87B0055659A /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347DCB51DBCD87B0055659A /* NSDate-Extension.swift */; };
 		6347DCB91DBCD8AC0055659A /* UITextView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347DCB81DBCD8AC0055659A /* UITextView+Extension.swift */; };
 		6347DCBD1DBD08540055659A /* FindEmoticon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347DCBC1DBD08540055659A /* FindEmoticon.swift */; };
-		6347DCC41DBD1AE30055659A /* JPLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6347DCC31DBD1AE30055659A /* JPLabel.m */; };
 		635B45011DBA6F9D00D09112 /* IconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635B44FB1DBA6F9D00D09112 /* IconCell.swift */; };
 		635B45031DBA6F9D00D09112 /* PublishController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635B44FD1DBA6F9D00D09112 /* PublishController.swift */; };
 		635B45041DBA6F9D00D09112 /* PublishController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 635B44FE1DBA6F9D00D09112 /* PublishController.xib */; };
@@ -91,6 +90,7 @@
 		639191A91DAD1653005B6C75 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 639191A41DAD1653005B6C75 /* SVRadialGradientLayer.m */; };
 		639191AB1DAD25D5005B6C75 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639191AA1DAD25D5005B6C75 /* UserAccount.swift */; };
 		6395F5F21DB687C50020A3CE /* StatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6395F5F11DB687C50020A3CE /* StatusViewModel.swift */; };
+		639974C81DCCACBA001C02BA /* HYLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639974C71DCCACBA001C02BA /* HYLabel.swift */; };
 		639B2D6C1DBE3EA50021C8E5 /* PhotoBr0wserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639B2D6B1DBE3EA50021C8E5 /* PhotoBr0wserController.swift */; };
 		63A501101D9C06AD001CB713 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A5010F1D9C06AD001CB713 /* LoginView.swift */; };
 		63A501121D9C06CD001CB713 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63A501111D9C06CD001CB713 /* LoginView.xib */; };
@@ -163,8 +163,6 @@
 		6347DCB51DBCD87B0055659A /* NSDate-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
 		6347DCB81DBCD8AC0055659A /* UITextView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+Extension.swift"; sourceTree = "<group>"; };
 		6347DCBC1DBD08540055659A /* FindEmoticon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindEmoticon.swift; sourceTree = "<group>"; };
-		6347DCC21DBD1AE30055659A /* JPLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPLabel.h; sourceTree = "<group>"; };
-		6347DCC31DBD1AE30055659A /* JPLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPLabel.m; sourceTree = "<group>"; };
 		635B44FB1DBA6F9D00D09112 /* IconCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconCell.swift; sourceTree = "<group>"; };
 		635B44FD1DBA6F9D00D09112 /* PublishController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishController.swift; sourceTree = "<group>"; };
 		635B44FE1DBA6F9D00D09112 /* PublishController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PublishController.xib; sourceTree = "<group>"; };
@@ -281,6 +279,7 @@
 		639191A41DAD1653005B6C75 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
 		639191AA1DAD25D5005B6C75 /* UserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
 		6395F5F11DB687C50020A3CE /* StatusViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewModel.swift; sourceTree = "<group>"; };
+		639974C71DCCACBA001C02BA /* HYLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYLabel.swift; sourceTree = "<group>"; };
 		639B2D6B1DBE3EA50021C8E5 /* PhotoBr0wserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoBr0wserController.swift; sourceTree = "<group>"; };
 		63A5010F1D9C06AD001CB713 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		63A501111D9C06CD001CB713 /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
@@ -495,15 +494,6 @@
 				6347DCB81DBCD8AC0055659A /* UITextView+Extension.swift */,
 			);
 			path = "UITextView(扩展)";
-			sourceTree = "<group>";
-		};
-		6347DCC11DBD1AE30055659A /* JPLabel */ = {
-			isa = PBXGroup;
-			children = (
-				6347DCC21DBD1AE30055659A /* JPLabel.h */,
-				6347DCC31DBD1AE30055659A /* JPLabel.m */,
-			);
-			path = JPLabel;
 			sourceTree = "<group>";
 		};
 		635B44F91DBA6F9D00D09112 /* Publish */ = {
@@ -744,6 +734,14 @@
 			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
+		639974C61DCCACBA001C02BA /* HYLabel */ = {
+			isa = PBXGroup;
+			children = (
+				639974C71DCCACBA001C02BA /* HYLabel.swift */,
+			);
+			path = HYLabel;
+			sourceTree = "<group>";
+		};
 		63A501091D9BFD2A001CB713 /* Tools(工具类) */ = {
 			isa = PBXGroup;
 			children = (
@@ -767,7 +765,7 @@
 		63C025C91DABE44900AC447F /* Lib(第三方库) */ = {
 			isa = PBXGroup;
 			children = (
-				6347DCC11DBD1AE30055659A /* JPLabel */,
+				639974C61DCCACBA001C02BA /* HYLabel */,
 				63C73F3A1DBBC21300080115 /* Masonry */,
 				636E046D1DBA7DEA00E3B7EF /* TZImagePickerController */,
 				635CF7611DB7A2C400399E2F /* MJRefresh */,
@@ -1089,7 +1087,6 @@
 				635CF7921DB7A2C400399E2F /* MJRefreshHeader.m in Sources */,
 				635CF78F1DB7A2C400399E2F /* MJRefreshBackFooter.m in Sources */,
 				6374B47D1DB7CABF0033D88E /* PhotosView.swift in Sources */,
-				6347DCC41DBD1AE30055659A /* JPLabel.m in Sources */,
 				636897761DAD4B6C0068631E /* UIView+WebCacheOperation.m in Sources */,
 				63C025E51DABE45300AC447F /* AFURLResponseSerialization.m in Sources */,
 				6368976A1DAD4B6C0068631E /* SDWebImageCompat.m in Sources */,
@@ -1134,6 +1131,7 @@
 				630556011DAFD11A00E0B190 /* WelcomeViewController.swift in Sources */,
 				636897671DAD4B6C0068631E /* MKAnnotationView+WebCache.m in Sources */,
 				6395F5F21DB687C50020A3CE /* StatusViewModel.swift in Sources */,
+				639974C81DCCACBA001C02BA /* HYLabel.swift in Sources */,
 				636897681DAD4B6C0068631E /* NSData+ImageContentType.m in Sources */,
 				636897701DAD4B6C0068631E /* UIButton+WebCache.m in Sources */,
 				636897751DAD4B6C0068631E /* UIImageView+WebCache.m in Sources */,

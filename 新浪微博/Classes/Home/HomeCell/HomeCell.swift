@@ -28,9 +28,9 @@ class HomeCell: UITableViewCell {
     //来源
     @IBOutlet weak var sourceLabel: UILabel!
     //微博正文
-    @IBOutlet weak var contentLabel: UILabel!
+    @IBOutlet weak var contentLabel: HYLabel!
     //转发的内容
-    @IBOutlet weak var retweetedContentLabel: UILabel!
+    @IBOutlet weak var retweetedContentLabel: HYLabel!
     //配图
     @IBOutlet weak var photosView: PhotosView!
     //转发背景图
